@@ -19,8 +19,8 @@ cursor.execute("SELECT count(*) FROM products").fetchall()
 ######Data Check
 pd.set_option('display.max_columns',None)
 
-product = pd.read_sql_query("SELECT * FROM products", conn)
-product.head()
+products = pd.read_sql_query("SELECT * FROM products", conn)
+products.head()
 
 product_attributes = pd.read_sql_query("SELECT * FROM product_attributes",conn)
 product_attributes.info()
@@ -30,17 +30,19 @@ categories = pd.read_sql_query("SELECT * FROM categories", conn)
 categories.info()
 categories.head()
 
+product_categories = pd.read_sql_query("SELECT * FROM product_categories", conn)
+product_categories.info()
+product_categories.head()
+
+reviews = pd.read_sql_query("SELECT * FROM reviews", conn)
+reviews.info()
+reviews.head()
+
 orders = pd.read_sql_query("SELECT * FROM orders", conn)
 orders.info()
 
 order_items = pd.read_sql_query("SELECT * FROM order_items", conn)
 order_items.info()
-
-product_categories = pd.read_sql_query("SELECT * FROM product_categories", conn)
-product_categories.info()
-
-reviews = pd.read_sql_query("SELECT * FROM reviews", conn)
-reviews.info()
 
 social_links = pd.read_sql_query("SELECT * FROM social_links", conn)
 social_links.info()
@@ -291,31 +293,12 @@ semantic_mappings = {
 }
 
 
-#self.db_path = db_path
-#self.conn = sqlite3.connect(db_path)
-#self.conn.row_factory = sqlite3.Row
-#self.cursor = self.conn.cursor()
-#self.semantic_mappings = self._define_mappings()
-#Extract Product Property
-"""
-Args:
-    product_id (int): 추출할 상품의 ID
-Returns:
-    Optional[Dict[str, Any]]: 의미 구조로 변환된 상품 데이터, 존재하지 않으면 None
-반환 구조:
-{
-    "type": "Product",
-    "id": 1,
-    "hasName": "상품명",
-    "hasPrice": {"value": 1000, "currency": "KRW"},
-    "hasDescription": "설명",
-    "hasImage": "URL",
-    "createdAt": "2024-01-01T00:00:00",
-    "updatedAt": "2024-01-01T00:00:00"
-}
-"""
+#Extract Property and Relationship
 semantic_products=[]
-for prod in product.itertuples(index=False):
+
+for prod in products.itertuples(index=False):
+
+    #Product property
     semantic_product={
         "type":"Product",
         "id":prod.id,
@@ -329,5 +312,59 @@ for prod in product.itertuples(index=False):
         "createdAt":prod.created_at,
         "updatedAt":prod.updated_at
     }
+
+    #Product categories
+    current_categories = product_categories[product_categories['product_id']==prod.id].merge(
+        categories,
+        left_on='category_id',
+        right_on='id',
+        how='inner'
+    )
+    semantic_product["belongsToCategory"]=[
+        {
+            "type": "Category",
+            "id": category.id,
+            "hasName": category.name,
+            "hasDescription": category.description
+        }
+        for category in current_categories.itertuples(index=False)
+    ]
+
+    #Product attributes
+    current_attributes=product_attributes[product_attributes['product_id']==prod.id]
+    semantic_product["hasAttribute"]=[
+        {
+            "propertyType":attribute.attribute_name,
+            "propertyValue":attribute.attribute_value
+        }
+        for attribute in current_attributes.itertuples(index=False)
+    ]
+
+    #Product reviews
+    current_reviews=reviews[reviews["product_id"]==prod.id]
+    semantic_product["hasReview"]=[
+        {
+            "type":"Review",
+            "id":review.id,
+            "hasRating":review.rating,
+            "hasComment":review.comment,
+            "createdAt":review.created_at
+        }
+        for review in current_reviews.itertuples(index=False)
+    ]
+
+    #Product social links
+    current_social_links=social_links[social_links["product_id"]==prod.id]
+    semantic_product["hasSocialLink"]=[
+        {
+            "type":"SocialLink",
+            "platform":link.platform,
+            "url":link.url
+        }
+        for link in current_social_links.itertuples(index=False)
+    ]
+
     semantic_products.append(semantic_product)
+
+
 

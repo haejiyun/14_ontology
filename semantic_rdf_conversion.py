@@ -170,6 +170,31 @@ for attr in conn.execute(
     attribute_count += 1
 
 
-
-
+######Saving
 g.serialize("db/abox.ttl", format="turtle")
+
+
+
+######SPARQL
+query = """
+PREFIX mall: <https://fastcampus.co.kr/data_online_ontology2/>
+
+SELECT ?name ?price ?catName
+WHERE {
+    ?p a mall:Electronics ;
+       mall:hasName ?name ;
+       mall:hasPrice ?price ;
+       mall:belongsToCategory ?c .
+
+    ?c mall:hasCategoryName ?catName .
+
+    FILTER (?price > 2000000)
+}
+ORDER BY DESC(?price)
+LIMIT 5
+"""
+
+results = g.query(query)
+
+for row in results:
+    print(row.name, row.price, row.catName)

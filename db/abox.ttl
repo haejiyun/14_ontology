@@ -1,0 +1,2619 @@
+@prefix : <http://www.semanticweb.org/haeji/ontologies/2026/8/untitled-ontology-3/> .
+@prefix mall: <https://fastcampus.co.kr/data_online_ontology2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/haeji/ontologies/2026/8/untitled-ontology-3> a owl:Ontology .
+
+:belongsToCategory a owl:ObjectProperty ;
+    rdfs:domain :Product ;
+    rdfs:range :Category .
+
+:hasCategoryName a owl:DatatypeProperty ;
+    rdfs:domain :Category ;
+    rdfs:range xsd:string .
+
+:hasComment a owl:DatatypeProperty ;
+    rdfs:domain :Review ;
+    rdfs:range xsd:string .
+
+:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain :Product ;
+    rdfs:range xsd:string .
+
+:hasImage a owl:DatatypeProperty ;
+    rdfs:domain :Product ;
+    rdfs:range xsd:anyURI .
+
+:hasName a owl:DatatypeProperty ;
+    rdfs:domain :Product ;
+    rdfs:range xsd:string .
+
+:hasPrice a owl:DatatypeProperty ;
+    rdfs:domain :Product ;
+    rdfs:range xsd:decimal .
+
+:hasRating a owl:DatatypeProperty ;
+    rdfs:domain :Review ;
+    rdfs:range xsd:integer .
+
+:reviewOf a owl:ObjectProperty ;
+    rdfs:domain :Review ;
+    rdfs:range :Product .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/105> a mall:Electronics ;
+    rdfs:comment "의심 가격: 499원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "7020mAh" ;
+    mall:hasCPU "Google Tensor G2" ;
+    mall:hasDescription "Google Pixel Tablet은 Google의 새로운 태블릿으로, Tensor G2 프로세서를 내장한 고성능 디스플레이와 높은 품질의 비디오 통신을 제공합니다. 이 제품은 가상 홈 관리, 사진 표시 및 온라인 쇼핑 등 다양한 기능으로 사용자 경험을 향상시키는 것을 목표로 합니다." ;
+    mall:hasImage "https://lh3.googleusercontent.com/VRPfQml16IJp9tjEr70sOmNcu3eqtRe-LXoOxWJ32CNkOic-wf-TuY5TPIUZ2EO6cpHACrQZsryh_kzb9UD4RbeTchIGMTHwxA=rw-e365-w1200"^^xsd:anyURI ;
+    mall:hasName "Google Pixel Tablet" ;
+    mall:hasOS "Android 13" ;
+    mall:hasPrice 499.0 ;
+    mall:hasRAM "8GB RAM" ;
+    mall:hasResolution "Full HD+" ;
+    mall:hasScreenSize "10.95인치" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "293g (17.39oz)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/108> a mall:Electronics ;
+    rdfs:comment "의심 가격: 199원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "Intel Atom" ;
+    mall:hasDescription "ASUS VivoTab Note 8은 8인치 크기의 윈도우 태블릿으로, 와콤디지타이저를 채용하여 휴대성과 사용성을 높였습니다." ;
+    mall:hasImage "https://www.asus.com/media/Odin/images/header/ROG_normal.svg"^^xsd:anyURI ;
+    mall:hasName "ASUS VivoTab Note 8 (M80TA)" ;
+    mall:hasOS "Windows 8.1" ;
+    mall:hasPrice 199.0 ;
+    mall:hasRAM "2GB RAM" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "8.0인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "0.4kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/115> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasDescription "Lenovo Tab M10 Plus (3rd Gen)는 고품질 옥타 코어 프로세서와 128GB의 저장공간을 갖춘 엔터테인먼트 태블릿입니다. 단 한번의 충전으로 몇 시간 동안 동영상 시청, 학습, 그 외 여러 작업을 진행할 수 있습니다." ;
+    mall:hasImage "https://fdn2.gsmarena.com/vv/bigpic/lenovo-tabm10plus.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo Tab M10 Plus (3rd Gen)" ;
+    mall:hasPrice 277060.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/116> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "10758mAh" ;
+    mall:hasCPU "Apple M1" ;
+    mall:hasDescription "Apple의 최신 세대 아이패드 프로는 강력한 Apple M1 칩셋과 뛰어난 디스플레이를 갖추고 있습니다. 이 태블릿은 사용자 경험을 향상시키며, 다양한 작업에 이상적입니다." ;
+    mall:hasImage "https://www.apple.com/v/ipad-pro/aw/images/meta/ipad-pro_overview__bu4cql27diaa_og.png?202603130019"^^xsd:anyURI ;
+    mall:hasName "Apple iPad Pro 12.9 M1" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 30000.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasResolution "10,000개 미니 LED 사용" ;
+    mall:hasScreenSize "12.9인치" ;
+    mall:hasStorage "128GB/256GB/512GB" ;
+    mall:hasWeight "約430g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/117> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "삼성 갤럭시 탭 S7 FE는 삼성전자가 공개한 최신 모델로, 대화면에서의 업무 효율성을 높이고 나만의 생각을 표현하는 S펜을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/2/27/Samsung_Galaxy_Tab_S7%2B.png"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 S7 FE (미스틱 실버, 128 GB)" ;
+    mall:hasOS "안드로이드 13" ;
+    mall:hasPrice 1298800.0 ;
+    mall:hasRAM "6GB" ;
+    mall:hasResolution "WQXGA" ;
+    mall:hasScreenSize "12.4인치" ;
+    mall:hasStorage "128GB" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/118> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 12시간 (Wi-Fi 모델)" ;
+    mall:hasCPU "A14 Bionic" ;
+    mall:hasDescription "Apple의 iPad Air (4세대)는 고급스러운 디자인과 강력한 성능을 갖춘 태블릿으로, 다양한 작업에 최적화되어 있습니다." ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111905_sp828ipad-air-ipados14-960.png"^^xsd:anyURI ;
+    mall:hasName "iPad Air (4th generation)" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 888000.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "2732 x 2048" ;
+    mall:hasScreenSize "10.9인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約458g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/119> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasDescription "ASUS의 ROG Pad는 게이밍을 위한 최상의 휴대용 태블릿으로, 강력한 성능과 뛰어난 사용자 경험을 제공합니다. 다양한 색상으로 선택할 수 있으며, 고급 소재와 디스플레이를 통해 게임을 즐기는 것을 완벽하게 지원합니다." ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/34326B61-C593-4C58-89C6-0E7D03C0C55B/fwebp"^^xsd:anyURI ;
+    mall:hasName "ASUS ROG Pad" ;
+    mall:hasPrice 129000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/120> a mall:Electronics ;
+    rdfs:comment "의심 가격: 799원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "Microsoft의 Surface Go 3는 Windows 11 태블릿으로, 프로세서가 앰버레이크 기반으로 변경된 Surface Go 2의 후속작입니다. 10.5인치 디스플레이는 화면 비율과 선명도에서 좋은 평가를 받고 있습니다." ;
+    mall:hasImage "https://i.namu.wiki/i/AsIWolGM17Z4hOHG-hw7lOYokXVc_vgjnJyzS1AtCPUy-DKOd1-fvQyf3lhivOn0by63fTCgJDXDbSJihyVbzRglej29nc4OYEUXNsXd-HNKkC0haF-Rg6ocJkfXSbJxywr7ZQU2MpjtGMWwwUiEyA.svg"^^xsd:anyURI ;
+    mall:hasName "Surface Go 3" ;
+    mall:hasOS "Windows 11 Home S mode" ;
+    mall:hasPrice 799.0 ;
+    mall:hasRAM "4GB (LTE 모델) / 6GB (WiFi 모델)" ;
+    mall:hasResolution "1920 x 1280" ;
+    mall:hasScreenSize "10.5인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "544g (WiFi 모델) / 553g (LTE 모델)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/121> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "10100mAh" ;
+    mall:hasCPU "Kirin 9000S chipset" ;
+    mall:hasDescription "화웨이의 Huawei MatePad Pro 13.2인치 태블릿은 최신 기술을 갖춘 강력한 성능과 품질로 사용자에게 놀라운 경험을 제공합니다." ;
+    mall:hasImage "https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg"^^xsd:anyURI ;
+    mall:hasName "Huawei MatePad Pro 13.2-inch" ;
+    mall:hasOS "HarmonyOS" ;
+    mall:hasPrice 4999000.0 ;
+    mall:hasRAM "16GB RAM" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "13.2인치" ;
+    mall:hasStorage "1024GB" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/122> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 7,400mAh" ;
+    mall:hasCPU "스냅드래곤8 Gen2" ;
+    mall:hasDescription "삼성전자가 출시한 고급 스마트폰 태블릿으로, 강력한 성능과 멀티미디어 기능을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/1/10/Samsung_Galaxy_S9_and_S9_Plus.png"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 S9 Plus" ;
+    mall:hasOS "안드로이드 10 / One UI 2.0" ;
+    mall:hasPrice 1050000.0 ;
+    mall:hasRAM "12GB" ;
+    mall:hasResolution "D-AMOLED 2X" ;
+    mall:hasScreenSize "12.4인치" ;
+    mall:hasStorage "256GB" ;
+    mall:hasWeight "約390g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/123> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "Apple M1" ;
+    mall:hasDescription "Apple iPad Pro 11 (2021)은 Apple의 최신 세대 태블릿으로, 강력한 Apple M1 칩셋과 높은 해상도 디스플레이를 갖추고 있습니다. 이 제품은 가볍지만 강력한 성능을 제공하며, 다양한 작업에 이상적입니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/d/d8/IPad_Pro_11_mockup.png"^^xsd:anyURI ;
+    mall:hasName "Apple iPad Pro 11 (2021) M1" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 1049.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "2388 x 1668 픽셀, 265ppi" ;
+    mall:hasScreenSize "11.0인치" ;
+    mall:hasStorage "2048GB" ;
+    mall:hasWeight "468g (16.51oz / 1.03파운드)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/124> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Lenovo ThinkPad 11 Pro는 강력한 AI 기능과 멀티데이 배터리로 생산성을 높이는 11인치 노트북입니다. Intel® Core™ 프로세서와 인텔® Arc™ 그래픽을 탑재하여 선명하고 흐림 없는 디자인이 가능합니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "Lenovo ThinkPad 11 Pro" ;
+    mall:hasPrice 0.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/125> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i5 or Intel Core i7 U-series (optional vPro)" ;
+    mall:hasDescription "HP의 HP Elite Dragonfly Folio G3는 이동성을 높이고 작업 환경을 개선하는 독특한 디자인과 강력한 성능을 갖춘 투인원 노트북입니다." ;
+    mall:hasImage "https://static0.xdaimages.com/wordpress/wp-content/uploads/2022/09/HP-Elite-Dragonfly-Folio-vs-Elite-Dragonfly-G3.jpg?w=1200&h=675&fit=crop"^^xsd:anyURI ;
+    mall:hasName "HP Elite Dragonfly Folio G3" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 23790.0 ;
+    mall:hasRAM "Up to 32GB LPDDR5" ;
+    mall:hasResolution "400 nits" ;
+    mall:hasScreenSize "13.5-inch 3K2K OLED, 3000 x 2000 resolution" ;
+    mall:hasStorage "256 GB up to 2TB PCIe NVMe M.2 SSD" ;
+    mall:hasWeight "2.2 pounds" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/126> a mall:Electronics ;
+    rdfs:comment "의심 가격: 249원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "MT8768T Helio P22T" ;
+    mall:hasDescription "삼성 갤럭시 탭 A7_lite는 8.7인치 디스플레이를 가진 안드로이드 태블릿으로, MT8768T Helio P22T 프로세서와 4GB RAM을 장착한 뛰어난 성능과 5100mAh 배터리를 제공합니다. 최신 OS인 Android 11을 사용하며, 다양한 기능을 지원하는 갤럭시 탭 시리즈의 일원입니다." ;
+    mall:hasImage "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a7-lite.jpg"^^xsd:anyURI ;
+    mall:hasName "Samsung Galaxy Tab A7 Lite" ;
+    mall:hasOS "Android 11" ;
+    mall:hasPrice 249.0 ;
+    mall:hasRAM "4GB RAM" ;
+    mall:hasResolution "N/A" ;
+    mall:hasScreenSize "8.7인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "약 476g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/127> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "A13 Bionic" ;
+    mall:hasDescription "이 아이패드는 Apple의 후속작으로, 디자인과 무게가 전작과 동일하며, 최초 적용된 iOS 15을 지원합니다. 기본 색상은 스페이스 그레이와 실버로 구성되어 있습니다." ;
+    mall:hasImage "https://i.namu.wiki/i/oMFBSwHGbtmDbDIacSpeFbmap9G-lSVnzUCNW-NV6VvwsztmncvewUTKrAvU_WK_A-6aO7-aXSBEnSylvzg7-A.svg"^^xsd:anyURI ;
+    mall:hasName "APPLE 2021 iPad 9세대 (64GB)" ;
+    mall:hasOS "iPadOS 26.3.1" ;
+    mall:hasPrice 349000.0 ;
+    mall:hasRAM "3GB" ;
+    mall:hasResolution "IPS-LCD, 60Hz" ;
+    mall:hasScreenSize "10.2인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約487g (Wi-Fi), 약 498g (Wi-Fi + Cellular)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/128> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "인텔® 코어™ i3-1215U 프로세서" ;
+    mall:hasColor "포그 실버" ;
+    mall:hasDescription "ASUS의 크롬북 태블릿은 커다란 화면에 마우스와 키보드를 지원하는 데스크톱 환경 덕분에 문서 작업이나 웹 서핑이 유연하게 가능합니다. 이 제품은 인텔® 코어™ i3-1215U 프로세서, 8GB RAM, 256GB UFS 스토리지와 크롬OS를 탑재하고 있습니다." ;
+    mall:hasImage "https://kmpic.asus.com/images/2023/01/04/de00547b-13f4-48e6-9ba8-10063407cb0d.png"^^xsd:anyURI ;
+    mall:hasName "ASUS Chromebook Tab" ;
+    mall:hasOS "크롬OS" ;
+    mall:hasPrice 682740.0 ;
+    mall:hasRAM "8GB RAM" ;
+    mall:hasStorage "256GB UFS 스토리지" ;
+    mall:hasWeight "0.67 x 8.77 x 12.35 inches" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/129> a mall:Electronics ;
+    rdfs:comment "의심 가격: 650원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "3577mAh" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "Surface Duo는 Microsoft가 출시한 첫 번째 스마트폰이자 두 화면을 가진 Android 태블릿으로, 직장에서 사용할 수 있는 고급스러운 디스플레이를 제공합니다." ;
+    mall:hasImage "https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg"^^xsd:anyURI ;
+    mall:hasName "Microsoft Surface Duo" ;
+    mall:hasOS "Android 10/12" ;
+    mall:hasPrice 650.0 ;
+    mall:hasRAM "6GB" ;
+    mall:hasResolution "8.1英寸, 145.2 x 93.3 x 9.9毫米 (folded)" ;
+    mall:hasScreenSize "8.1英寸" ;
+    mall:hasStorage "256GB" ;
+    mall:hasWeight "144g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/130> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "7500mAh" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "화웨이의 안드로이드 태블릿 컴퓨터 브랜드인 MediaPad M 시리즈의 한 제품으로, 오래가는 배터리 수명과 아름다운 금속 유니바디 디자인을 갖춘 최고의 안드로이드 태블릿입니다." ;
+    mall:hasImage "https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg"^^xsd:anyURI ;
+    mall:hasName "HUAWEI MediaPad M5 lite" ;
+    mall:hasOS "안드로이드" ;
+    mall:hasPrice 129900.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "1080p HD" ;
+    mall:hasScreenSize "10.1인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "316g (11.1oz)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/131> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "5000mAh" ;
+    mall:hasCPU "퀄컴 스냅드래곤 8 Gen 1 Mobile Platform" ;
+    mall:hasDescription "삼성전자가 출시한 플래그십 안드로이드 태블릿으로, 강력한 성능과 다양한 기능을 제공합니다." ;
+    mall:hasImage "https://i.namu.wiki/i/hks06adLu9Hugi26PDazggsqF47upJRILn6hT9Y_VO3K6Zer_CgShwAU6AaxTSySHx0UcH3IJ-zWnz69EaQf5rb7l9GJEkPpViHsofpZD6mDgL7677-8Yc1n2HOPfX3Dg7BIZQ7UW6au65VufVZ66w.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 S8" ;
+    mall:hasOS "안드로이드 14" ;
+    mall:hasPrice 1598300.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasScreenSize "11인치" ;
+    mall:hasStorage "128GB" ;
+    mall:hasWeight "約390g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/132> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "30.2Wh" ;
+    mall:hasCPU "A12 Bionic" ;
+    mall:hasDescription "애플이 2019년에 출시한 3세대 아이패드 에어는 10.5인치 IPS-LCD 디스플레이를 갖추고 있으며, A12 Bionic 프로세서와 3GB RAM을 탑재해 향상된 성능과 사용성을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/IPad_Air_3_Mockup.png/960px-IPad_Air_3_Mockup.png"^^xsd:anyURI ;
+    mall:hasName "APPLE iPad Air 3세대 (64GB)" ;
+    mall:hasOS "iPadOS 26.3" ;
+    mall:hasPrice 498000.0 ;
+    mall:hasRAM "3GB" ;
+    mall:hasResolution "2224 x 1668" ;
+    mall:hasScreenSize "10.5인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約464g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/133> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasDescription "Lenovo Yoga Tab 13는 강력한 성능과 멀티미디어 경험을 제공하는 13인치 태블릿입니다. Snapdragon 870 5G 칩셋, 256GB 저장공간, 8GB RAM 등이 특징이며, Dolby Vision™와 JBL 스피서의 사운드를 통해 멀티미디어 경험을 향상시킵니다." ;
+    mall:hasImage "https://fdn2.gsmarena.com/vv/bigpic/lenovo-yoga-pad-pro.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo Yoga Tab 13" ;
+    mall:hasPrice 786240.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/134> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "HP 파빌리온 X2는 휴대성이 좋은 윈도우 기반 태블릿PC로, 노트북과 태블릿을 한 번에 사용할 수 있는 독특한 디자인으로 인기를 끌고 있습니다." ;
+    mall:hasImage "https://img.danawa.com/images/attachFiles/3/820/2819685_1.jpg?_v=1774242231779"^^xsd:anyURI ;
+    mall:hasName "HP Pavilion X2 10.1″ Detachable Laptop / Tablet" ;
+    mall:hasOS "원도우8 기반의 윈도우 10" ;
+    mall:hasPrice 109950.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "10.1인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/135> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "6000mAh" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "소니 엑스페리아 태블릿 Z는 10.1인치 대형 화면을 자랑하는 안드로이드 태블릿으로, 방수/방진 기능과 뛰어난 성능을 갖추고 있습니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/So-02e.jpg/1280px-So-02e.jpg"^^xsd:anyURI ;
+    mall:hasName "Sony Xperia Tablet Z" ;
+    mall:hasOS "Android 4.1.2" ;
+    mall:hasPrice 29340.0 ;
+    mall:hasRAM "2GB" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "10.1인치" ;
+    mall:hasStorage "16GB" ;
+    mall:hasWeight "495g (1.09 pounds)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/136> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "7,000mAh" ;
+    mall:hasCPU "Octa-Core" ;
+    mall:hasDescription "갤럭시 탭 액티브4 프로는 거친 환경에서도 안심하고 사용할 수 있는 견고함을 갖추었습니다. 물과 먼지에 강한 IP68 등급은 물론, Corning® Gorilla® Glass 5와 MIL-STD-810H 인증을 받아 충격에도 걱정 없죠." ;
+    mall:hasImage "https://images.samsung.com/kdp/common/img-induce-benefit-4.png"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 Active4 Pro" ;
+    mall:hasOS "Android 12" ;
+    mall:hasPrice 430000.0 ;
+    mall:hasRAM "6GB RAM" ;
+    mall:hasResolution "1600 x 1080" ;
+    mall:hasScreenSize "10.4인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "325g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/137> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 14시간 사용 가능" ;
+    mall:hasCPU "Apple M3" ;
+    mall:hasDescription "Apple의 고급 태블릿으로, M3 프로세서와 뛰어난 그래픽 성능을 갖추고 있습니다. 12.9인치 디스플레이는 탁월한 사용자 경험과 작업성을 제공합니다." ;
+    mall:hasImage "https://cdsassets.apple.com/live/7WUAS350/images/ipad/fall-2025-ipad-pro-m5-13in.png"^^xsd:anyURI ;
+    mall:hasName "iPad Pro 12.9 M3" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 450000.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasResolution "2388 x 1668" ;
+    mall:hasScreenSize "12.9인치" ;
+    mall:hasStorage "512GB" ;
+    mall:hasWeight "約670g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/138> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "ASUS Pad 11 Pro는 고해상도 디스플레이와 강력한 성능을 갖춘 휴대용 태블릿으로, 작업과 업무를 위한 완벽한 선택입니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "ASUS Pad 11 Pro" ;
+    mall:hasOS "미확인" ;
+    mall:hasPrice 0.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "11인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/139> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "13시간 이상" ;
+    mall:hasCPU "ARM 프로세서 (SQ1 또는 SQ2)" ;
+    mall:hasDescription "Microsoft의 Surface Pro X는 강력한 AI 기능을 갖춘 2-in-1 태블릿으로, 터치스크린과 레이저 키보드를 통해 다양한 작업을 수행할 수 있습니다. 최신 ARM 프로세서와 고성능 배터리로 가볍게 사용하면서도 강력한 성능을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/d/d5/Surface_Pro_X.png"^^xsd:anyURI ;
+    mall:hasName "Surface Pro X" ;
+    mall:hasOS "Windows 10 (upgradeable to Windows 11)" ;
+    mall:hasPrice 899999.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasScreenSize "13.0인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "774g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/140> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "8800mAh" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "Huawei MatePad 11.5 S는 2024년에 출시된 무광택 디스플레이를 갖춘 태블릿으로, 그림 그리기와 작업에 최적화되어 있습니다." ;
+    mall:hasImage "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-11-5-s-2026/images/hero/huawei-matepad-11-5-s-kv-thumb.jpg"^^xsd:anyURI ;
+    mall:hasName "Huawei MatePad 11.5 S" ;
+    mall:hasOS "HarmonyOS" ;
+    mall:hasPrice 399900.0 ;
+    mall:hasRAM "8GB RAM" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "11.5인치" ;
+    mall:hasStorage "512GB" ;
+    mall:hasWeight "475g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/141> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 8,000mAh" ;
+    mall:hasCPU "미디어텍 Dimensity 9300+" ;
+    mall:hasDescription "12.4인치 대화면을 자랑하는 삼성 갤럭시 탭 Plus는 AI 기능과 퀄컴 프로세서를 통해 최신 기술을 경험할 수 있습니다." ;
+    mall:hasImage "https://images.samsung.com/kdp/common/img-induce-benefit-4.png"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 Plus" ;
+    mall:hasOS "안드로이드 13" ;
+    mall:hasPrice 799000.0 ;
+    mall:hasRAM "LPDDR5X 12GB RAM" ;
+    mall:hasResolution "2560 x 1600" ;
+    mall:hasScreenSize "12.4인치" ;
+    mall:hasStorage "UFS 4.0" ;
+    mall:hasWeight "약 670g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/142> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "7340mAh" ;
+    mall:hasCPU "Apple A8X (64비트)" ;
+    mall:hasDescription "Apple의 두 번째 세대 아이패드 태블릿은 최신 기술과 강력한 성능을 제공하며, 사용자 친화적인 디자인으로 다양한 작업에 적합합니다." ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/112017_SP708-silver.jpeg"^^xsd:anyURI ;
+    mall:hasName "Apple iPad Air 2 (64GB)" ;
+    mall:hasOS "iPadOS 15.8.7 (최신 버전)" ;
+    mall:hasPrice 329000.0 ;
+    mall:hasRAM "2GB" ;
+    mall:hasResolution "9.7인치 IPS-LCD" ;
+    mall:hasScreenSize "9.7인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約437g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/143> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "12300mAh" ;
+    mall:hasCPU "Dimensity 9000" ;
+    mall:hasDescription "Lenovo Tab Extreme는 강력한 성능과 뛰어난 디스플레이를 갖춘 대형 안드로이드 태블릿으로, 프로페셔널 사용자와 게이머 모두에게 적합합니다." ;
+    mall:hasImage "https://fdn2.gsmarena.com/vv/bigpic/lenovo-tab-extreme.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo Tab Extreme" ;
+    mall:hasOS "안드로이드 15" ;
+    mall:hasPrice 1200.0 ;
+    mall:hasRAM "12GB RAM" ;
+    mall:hasResolution "1440 x 2880" ;
+    mall:hasScreenSize "14.5인치" ;
+    mall:hasStorage "256GB ROM" ;
+    mall:hasWeight "740g (태블릿) / 1.5kg (키보드 포함)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/144> a mall:Electronics ;
+    rdfs:comment "의심 가격: 259원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "ARM" ;
+    mall:hasDescription "HP Slate Tablet은 ARM 프로세서를 사용하는 10인치 태블릿으로, 고성능과 향상된 사용자 경험을 제공합니다." ;
+    mall:hasImage "https://static-data2.manualslib.com/product-images/56f/746200/hp-slate-tablet.jpg"^^xsd:anyURI ;
+    mall:hasName "HP Slate Tablet" ;
+    mall:hasOS "미확인" ;
+    mall:hasPrice 259.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "10인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/145> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "14시간" ;
+    mall:hasCPU "MT8188J" ;
+    mall:hasDescription "Amazon Fire Max 11은 아름다운 화면과 매끈한 새로운 디자인을 갖춘 역대 가장 강력하고 다양한 기능을 제공하는 태블릿입니다. 11.0\" 크기의 대형 화면으로 비디오와 읽기에 최적화되어 있습니다." ;
+    mall:hasImage "https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-reorg-privacy._CB779528203_.png"^^xsd:anyURI ;
+    mall:hasName "Amazon Fire Max 11 tablet" ;
+    mall:hasOS "Android" ;
+    mall:hasPrice 229999.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "2.4 million pixels" ;
+    mall:hasScreenSize "11.0인치" ;
+    mall:hasStorage "128GB" ;
+    mall:hasWeight "약 350g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/146> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "10.9小时 (Wi-Fi 모델), 11.3小时 (Wi-Fi + Cellular 모델)" ;
+    mall:hasCPU "Apple M1X 칩" ;
+    mall:hasDescription "Apple의 iPad Pro 11 Gen 3은 모서리가 둥근 형태로 설계된 고급 스마트 태블릿으로, 강력한 성능과 품질적인 디자인을 자랑합니다. 이 제품은 Wi-Fi와 Wi-Fi + Cellular 모델이 있으며, 사용자의 편의성을 극대화하는 다양한 기능을 제공합니다." ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111897_ipad-pro-11.png"^^xsd:anyURI ;
+    mall:hasName "iPad Pro 11 Gen 3" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 0.0 ;
+    mall:hasRAM "8GB RAM" ;
+    mall:hasResolution "2640 x 1200" ;
+    mall:hasScreenSize "11.0英寸" ;
+    mall:hasStorage "512GB, 1TB" ;
+    mall:hasWeight "466g (Wi-Fi 모델) / 470g (Wi-Fi + Cellular 모델)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/147> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "[프로세서/AO]" ;
+    mall:hasDescription "아름다운 디자인과 품질이 뛰어난 ASUS ZenPad 10 태블릿은 10.1인치 화면을 통해 독특한 경험을 제공합니다." ;
+    mall:hasImage "https://ir.ebaystatic.com/cr/v/c1/s_1x2.gif"^^xsd:anyURI ;
+    mall:hasName "ASUS ZenPad 10 (Z300CNL)" ;
+    mall:hasOS "안드로이드 OS" ;
+    mall:hasPrice 398270.0 ;
+    mall:hasRAM "2GB" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "10.1인치" ;
+    mall:hasStorage "32GB" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/148> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "10세대 Intel® Core™ i5-1035G1 또는 i7-1065G7" ;
+    mall:hasDescription "Surface Pro 7+는 강력한 성능과 다양한 기능을 갖춘 고급 노트북으로, 작업 및 휴대성을 모두 만족시킵니다." ;
+    mall:hasImage "https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png"^^xsd:anyURI ;
+    mall:hasName "Microsoft Surface Pro 7+" ;
+    mall:hasOS "Windows 11 Home 또는 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD카드 슬롯" ;
+    mall:hasPrice 1250000.0 ;
+    mall:hasRAM "8GB LPDDR4x RAM 최대 16GB" ;
+    mall:hasScreenSize "12.3英寸" ;
+    mall:hasStorage "512GB SSD 최대 1TB NVMe SSD" ;
+    mall:hasWeight "約775克 (약 1.709磅)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/149> a mall:Electronics ;
+    rdfs:comment "의심 가격: 290원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "Nvidia Tegra 3" ;
+    mall:hasDescription "이 태블릿은 구글과 에이수스가 공동 개발한 7인치 화면을 가진 Android 운영체제를 사용하는 초소형 태블릿으로, 품질과 성능이 뛰어나다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Nexus_7_%282013%29.png/960px-Nexus_7_%282013%29.png"^^xsd:anyURI ;
+    mall:hasName "Google Nexus 7 (2013)" ;
+    mall:hasOS "Android" ;
+    mall:hasPrice 290.0 ;
+    mall:hasRAM "32GB" ;
+    mall:hasResolution "7.0인치" ;
+    mall:hasScreenSize "7.0인치" ;
+    mall:hasStorage "4325mAh 배터리" ;
+    mall:hasWeight "10oz" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/150> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "5,000mAh" ;
+    mall:hasCPU "엑시노스 3465" ;
+    mall:hasDescription "이 제품은 삼성의 중저가형 태블릿으로, 작은 크기와 가격대를 자랑합니다. 프로세서는 엑시노스 3465을 사용하며, 1.5GB의 RAM과 16GB의 내부 저장공간을 제공합니다." ;
+    mall:hasImage "https://i.namu.wiki/i/9NnfLjlM7WaH-aO573BhBbyzPJJ9pQPWEoSZX56TK6cMlbLCRr4h7hlRUJ3idycISJjCKQnxtEK5U99sWKIVnw.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 E 8.0 LTE (16GB)" ;
+    mall:hasOS "안드로이드" ;
+    mall:hasPrice 29800.0 ;
+    mall:hasRAM "1.5GB" ;
+    mall:hasScreenSize "8인치" ;
+    mall:hasStorage "16GB" ;
+    mall:hasWeight "약 360g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/151> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "내장형 5,124mAh" ;
+    mall:hasCPU "A17 Pro" ;
+    mall:hasDescription "Apple이 출시한 iPad mini의 후속작으로, 8.3인치 Liquid Retina 디스플레이와 A17 Pro 칩셋을 탑재한 이 tablet은 다양한 사용자 경험을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/IPad_Mini_4_Space_Gray.png/960px-IPad_Mini_4_Space_Gray.png"^^xsd:anyURI ;
+    mall:hasName "iPad mini (5세대)" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 49900.0 ;
+    mall:hasRAM "3GB" ;
+    mall:hasScreenSize "8.3인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約308.2g (0.679lb)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/152> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "7040 mAh" ;
+    mall:hasCPU "MTK G88" ;
+    mall:hasDescription "레노버의 Lenovo IdeaPad Tab M11는 강력한 MediaTek G88 오cta-core 프로세서와 생생한 디스플레이를 갖춘 11인치 태블릿입니다. 하루 종일 지속되는 배터리 수명으로 학습과 엔터테인먼트에 최적화되었습니다." ;
+    mall:hasImage "https://news.lenovo.com/wp-content/uploads/2024/01/05_Yoga_Pro_9i_16_9_Luna_Grey_3200_mini-led_glass_PureSight_Pro_Mini-LEd.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo IdeaPad Tab M11" ;
+    mall:hasOS "Android 13" ;
+    mall:hasPrice 4000.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "1200x1920 픽셀" ;
+    mall:hasScreenSize "11인치" ;
+    mall:hasStorage "128GB" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/153> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 3시간" ;
+    mall:hasCPU "Bay Trail-T" ;
+    mall:hasDescription "HP의 고급 태블릿 PC로, 빠른 처리 속도와 강력한 기능으로 업무를 효율적으로 수행할 수 있습니다. 6.1인치 화면과 4GB RAM을 갖추고 있어 휴대성과 성능 모두 최적화되었습니다." ;
+    mall:hasImage "https://cache.tradeinn.com/web/web/inn.jpg"^^xsd:anyURI ;
+    mall:hasName "HP ElitePad 1000 G2" ;
+    mall:hasOS "Windows 8.1 Pro" ;
+    mall:hasPrice 299000.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "1280 x 800" ;
+    mall:hasScreenSize "6.1인치" ;
+    mall:hasStorage "없음" ;
+    mall:hasWeight "約500g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/154> a mall:Electronics ;
+    rdfs:comment "의심 가격: 149원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "VIA WM8950" ;
+    mall:hasDescription "ASUS MeMO Pad 7은 저렴한 가격으로 학생들이 구매하는 경우가 많으며, 동영상 플레이어의 버퍼링 현상이 심하다면 안 좋은 소리를 들을 수 있습니다. 최신 모델인 ASUS MeMO Pad HD 7과 비교해 성능이 약간 떨어지는 것을 볼 수 있습니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "ASUS MeMO Pad 7(ME70CX)" ;
+    mall:hasOS "Android 4.1.1 (Jelly Bean)" ;
+    mall:hasPrice 149.0 ;
+    mall:hasRAM "1GB RAM" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "7" ;
+    mall:hasStorage "8GB (Android 4.2.2) 또는 16GB" ;
+    mall:hasWeight "370g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/17> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 i7-13600H" ;
+    mall:hasDescription "디스플레이 크기는 15.6인치, 최대 그래픽 카드는 NVIDIA GeForce RTX™ 5070을 탑재한 고성능 게이밍 노트북입니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX™ 3070" ;
+    mall:hasImage "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g15-5530/pdp/laptop-g-15-5530-pdp-hero-sl.psd?qlt=95&fit=constrain,1&hei=400&wid=570&fmt=jpg"^^xsd:anyURI ;
+    mall:hasName "Dell G15 5530" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPort "HDMI 2.1, USB-C, USB-A, SD 카드 리더" ;
+    mall:hasPrice 3670590.0 ;
+    mall:hasRAM "16GB DDR5" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "SSD 512GB" ;
+    mall:hasWeight "2.81kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/18> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "놀라운 2.8K OLED 디스플레이를 갖춘 AMD Ryzen™ AI 300 시리즈 프로세서로 구동되는 16인치 Lenovo IdeaPad Pro 5 Gen 10 Copilot+ PC는 생산성과 엔터테인먼트를 위한 강력하고 다재다능한 노트북입니다." ;
+    mall:hasImage "https://example.com/lenovo-ideapad-pro-5-gen10.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo IdeaPad Pro 5 Gen 10(16인치 AMD)" ;
+    mall:hasPrice 2323460.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/19> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-1360P" ;
+    mall:hasDescription "ASUS의 ProBook Flip 14 Evo는 강력한 성능과 휴대성으로 업무와 개인 사용 모두에 최적화된 노트북입니다. 이 제품은 고급 그래픽 카드를 탑재하고 있으며, 뛰어난 디스플레이와 무게감 있는 슬림한 설계로 사용자에게 편리함을 제공합니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics (Integrated)" ;
+    mall:hasImage "https://www.asus.com/media/Odin/images/header/ROG_normal.svg"^^xsd:anyURI ;
+    mall:hasName "ASUS ProBook Flip 14 Evo" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 1599000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "QHD+" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "1TB SSD" ;
+    mall:hasWeight "1.39kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/26> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "12코어 CPU, 19코어 GPU" ;
+    mall:hasDescription "Apple의 최신 세대 MacBook Pro 16인치 모델은 강력한 성능과 다양한 연결 옵션을 제공하며, 사용자 경험을 향상시킵니다." ;
+    mall:hasGPU "16코어 GPU, 19코어 GPU" ;
+    mall:hasImage "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg"^^xsd:anyURI ;
+    mall:hasName "MacBook Pro 16 M2 Pro" ;
+    mall:hasOS "macOS Ventura" ;
+    mall:hasPort "3개의 Thunderbolt 4 포트, SDXC 카드 슬롯, MagSafe 3 충전 포트" ;
+    mall:hasPrice 2099000.0 ;
+    mall:hasRAM "16GB RAM" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "16인치" ;
+    mall:hasStorage "1TB SSD" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/27> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Dell의 Dell Inspiron 15 5000 노트북은 고성능과 향상된 사용자 경험을 제공하며, 다양한 연결 포트와 강력한 배터리 수명으로 작업 및 게임을 즐길 수 있습니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "Dell Inspiron 15 5000" ;
+    mall:hasPrice 30700.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/28> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Lenovo ThinkBook 16은 강력한 성능과 첨단 기술을 갖춘 16형 비즈니스 노트북으로, Intel Core Ultra 프로세서와 AI 기반의 보안 및 생산성을 제공합니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "Lenovo ThinkBook 16" ;
+    mall:hasPrice 1090000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/29> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "3-cell Li-ion Battery" ;
+    mall:hasCPU "Intel Core i7-8565U" ;
+    mall:hasDescription "이 노트북은 최신 인텔 Ryzen 7-5700U 프로세서와 256GB SSD를 탑재하여 빠른 처리 속도와 안정적인 성능을 제공합니다. 또한, 1920x1080 해상도의 Full HD 디스플레이를 통해 품질 높은 이미지와 동영상을 즐길 수 있습니다." ;
+    mall:hasImage "https://c1.neweggimages.com/ProductImage/V36ND25011719BWTR9B.jpg"^^xsd:anyURI ;
+    mall:hasName "HP Pavilion 15-EH1000 Laptop" ;
+    mall:hasOS "Windows 10 Pro" ;
+    mall:hasPrice 350000.0 ;
+    mall:hasRAM "8GB DDR4" ;
+    mall:hasResolution "1920x1080 (FHD)" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "1.7kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/33> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "40Whr" ;
+    mall:hasCPU "Intel Core i7-8565U" ;
+    mall:hasDescription "가볍고 튼튼한 최고급 HP ENVY 13 노트북은 가정과 사무실 작업 모두에 적합하며, 빠른 속도와 세련된 디자인을 자랑합니다." ;
+    mall:hasGPU "Intel UHD Graphics 620" ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/hp-envy-13-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "HP ENVY 13" ;
+    mall:hasOS "Windows 10 Home" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 599000.0 ;
+    mall:hasRAM "8GB DDR4" ;
+    mall:hasResolution "Full HD (1920 x 1080)" ;
+    mall:hasScreenSize "13.3인치" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "1.37kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/34> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7" ;
+    mall:hasDescription "ASUS의 ASUS ZenBook 14 UX435는 최신 인텔 프로세서와 고성능 그래픽을 탑재한 휴대용 노트북으로, 뛰어난 성능과 가벼운 무게를 자랑합니다." ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/asus-zenbook-14-ux435-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "ASUS ZenBook 14 UX435" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 450000.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasScreenSize "14英寸" ;
+    mall:hasStorage "NVMe SSD 512GB" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/35> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "8코어" ;
+    mall:hasDescription "초고속 M1 칩을 탑재한 MacBook Air는 얇은 디자인과 풍부한 색상 지원으로 인해 가볍게 들 수 있는 노트북 중 하나입니다. 8코어 CPU와 7코어 GPU를 갖춘 이 제품은 최대 512GB의 SSD 저장공간을 제공하며, 16코어 Neural Engine과 True Tone 기능이 포함되어 있습니다." ;
+    mall:hasGPU "7코어",
+        "M1 칩 내장 그래픽" ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111883_macbookair.png"^^xsd:anyURI ;
+    mall:hasName "MacBook Air (M1, 2020)" ;
+    mall:hasOS "macOS Big Sur" ;
+    mall:hasPrice 949000.0 ;
+    mall:hasRAM "8GB 통합 메모리" ;
+    mall:hasResolution "2560 x 1600" ;
+    mall:hasScreenSize "13인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.39kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/36> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Dell의 최신 디자인과 강력한 성능을 갖춘 Dell XPS 13 Plus 노트북은 뛰어난 가성비와 품질로 사용자를 만족시킵니다. 이 모델에는 인텔 코어 i5-13세대 프로세서가 탑재되어 있으며, 1920x1200 해상도의 고화질 디스플레이를 제공합니다." ;
+    mall:hasImage "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9320/pdp/laptop-xps-13-9320-pdp-hero-nonoled-gy.psd?fmt=jpg&wid=570&hei=400"^^xsd:anyURI ;
+    mall:hasName "Dell XPS 13 Plus 9320R WP01KR (SSD 512GB)" ;
+    mall:hasPrice 8499000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/37> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "이동 중에도 창의력을 발휘하도록 설계된 획기적인 14인치 투인원 노트북입니다. 인텔® 코어™ 프로세서를 사용하여 뛰어난 성능과 멀티태스킹을 제공합니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "Lenovo Yoga 9i 2-in-1 (14″ Intel)" ;
+    mall:hasPrice 0.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/38> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 i9-13980HX" ;
+    mall:hasDescription "ASUS ProArt Studiobook 16 OLED H7604JV-MY072X는 고성능과 뛰어난 디스플레이를 갖춘 노트북으로, 프로페셔널 콘텐츠 제작에 최적화되었습니다. 이 노트북은 인텔 코어 i9-13980HX CPU와 NVIDIA GeForce RTX 40 Series GPU를 탑재하고 있으며, 3200x2000 해상도의 OLED 디스플레이로 놀라운 이미지 품질을 제공합니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 40 Series GPU" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/2496af20-0c43-41ed-94d7-1eda080bd857/"^^xsd:anyURI ;
+    mall:hasName "ASUS ProArt Studiobook 16 OLED H7604JV-MY072X (SSD 1TB)" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1599000.0 ;
+    mall:hasRAM "64GB DDR4 ECC 메모리" ;
+    mall:hasResolution "500nit 밝기, 120Hz 주사율" ;
+    mall:hasScreenSize "16인치" ;
+    mall:hasStorage "1TB SSD" ;
+    mall:hasWeight "2.4kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/39> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "53.5Wh" ;
+    mall:hasCPU "Intel Core i7-11800H (2.3GHz)" ;
+    mall:hasDescription "MSI의 MSI Sword 15는 최신 11세대 인텔 코어 i7 프로세서와 NVIDIA GeForce RTX 30 시리즈 그래픽을 탑재한 게이밍 노트북으로, 강력한 성능과 뛰어난 디자인으로 유명합니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 30 시리즈" ;
+    mall:hasImage "https://www.pcworld.com/wp-content/uploads/2025/04/msi-sword-15-1.jpg?quality=50&strip=all&w=1024"^^xsd:anyURI ;
+    mall:hasName "MSI Sword 15" ;
+    mall:hasOS "프리도스 OS 미포함" ;
+    mall:hasPort "USB-A, USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 1299000.0 ;
+    mall:hasRAM "최대 32GB DDR4" ;
+    mall:hasResolution "1920x1080 (FHD)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "NVMe PCIe Gen4 SSD 최대 512GB" ;
+    mall:hasWeight "2.25kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/45> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "5Wh" ;
+    mall:hasCPU "Intel Core i7-11800H" ;
+    mall:hasDescription "MSI Pulse GL66는 최신 Intel® Core™ i7 프로세서와 NVIDIA® GeForce RTX™ 3060 그래픽을 탑재한 강력한 게이밍 노트북으로, 풍부한 성능과 놀라운 화질을 제공합니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 3060" ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/msi-gl66-pulse-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "MSI Pulse GL66" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 1890000.0 ;
+    mall:hasRAM "8GB DDR4" ;
+    mall:hasScreenSize "QHD (1920x1080) @ 165Hz" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "2.25kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/46> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "AMD Ryzen™ 9 6900HS" ;
+    mall:hasDescription "ASUS의 ROG 브랜드에서 제공하는 게이밍 노트북으로, 강력한 성능과 가벼운 무게를 자랑합니다. 최신 AMD Ryzen™ 9 CPU와 GeForce RTX™ GPU로 업그레이드된 ROG Zephyrus G15은 어디서든 편안하게 즐길 수 있습니다." ;
+    mall:hasGPU "GeForce RTX™ 3080 Ti" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/CE9E6F7B-13D6-426F-885A-38476F8E9739"^^xsd:anyURI ;
+    mall:hasName "ASUS ROG Zephyrus G15" ;
+    mall:hasOS "Windows 10 Home" ;
+    mall:hasPrice 206990.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasScreenSize "15.6英寸" ;
+    mall:hasStorage "1TB SSD" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/47> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "10코어 또는 12코어 CPU" ;
+    mall:hasDescription "맥북 프로 14인치는 맥북 프로 시리즈의 최신 모델로, 강력한 성능과 뛰어난 디스플레이를 자랑합니다. M2 Pro 또는 M2 Max 칩셋을 탑재하여 AI와 고급 그래픽 작업에 이상적입니다." ;
+    mall:hasGPU "16코어 또는 19코어 GPU" ;
+    mall:hasImage "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m2-spacegray-202303?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1680103613621"^^xsd:anyURI ;
+    mall:hasName "MacBook Pro 14 M2" ;
+    mall:hasOS "macOS" ;
+    mall:hasPrice 3490000.0 ;
+    mall:hasRAM "32GB 통합 메모리" ;
+    mall:hasResolution "대략적인 값 없음 (노트북의 경우 일반적으로 해상도는 고려되지 않음)" ;
+    mall:hasStorage "대략적인 값 없음 (노트북의 경우 일반적으로 저장공간은 고려되지 않음)" ;
+    mall:hasWeight "대략적인 값 없음 (노트북의 경우 일반적으로 무게는 고려되지 않음)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/48> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Dell G16 5630은 강력한 성능과 뛰어난 그래픽을 갖춘 고급 게이밍 노트북으로, 인텔 코어 i7-1360P 프로세서와 Iris Xe 그래픽 카드를 탑재합니다." ;
+    mall:hasImage "https://img.danawa.com/new/danawaApp/img/app1.gif"^^xsd:anyURI ;
+    mall:hasName "Dell G16 5630" ;
+    mall:hasPrice 295000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/49> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "외장 배터리 지원, 최대 15시간 사용 가능" ;
+    mall:hasCPU "AMD Ryzen PRO" ;
+    mall:hasDescription "AMD Ryzen PRO 프로세서가 탑재된 16인치 Lenovo ThinkPad L16 Gen 2 노트북은 강력한 성능과 뛰어난 생산성을 제공합니다." ;
+    mall:hasGPU "없음 (Integrated Graphics)" ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "Lenovo ThinkPad L16" ;
+    mall:hasOS "Windows 11 Pro 또는 Windows 10 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 0.0 ;
+    mall:hasRAM "최대 32GB DDR4" ;
+    mall:hasResolution "Full HD (1920x1080)" ;
+    mall:hasScreenSize "16인치" ;
+    mall:hasStorage "최대 1TB NVMe SSD" ;
+    mall:hasWeight "약 2.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/50> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어i5-12세대 i5-1235U (1.3GHz)" ;
+    mall:hasDescription "HP 엔비 x360 15-ew0053TU는 인텔 코어i5-12세대 CPU와 512GB SSD를 탑재한 휴대성과 다양한 모드 활용성을 갖춘 2in1 노트북입니다. 1920x1080 해상도의 OLED 디스플레이를 통해 뛰어난 화질을 제공하며, 500니트 밝기로 탁월한 시청감을 자랑합니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://photo3.enuri.info/data/images/service/middle/104910000/104910128.jpg"^^xsd:anyURI ;
+    mall:hasName "HP 엔비 x360 15-ew0053TU (SSD 512GB)" ;
+    mall:hasOS "윈도우11 홈" ;
+    mall:hasPort "미확인" ;
+    mall:hasPrice 1467750.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "1920x1080(FHD)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "NVMe SSD 512GB" ;
+    mall:hasWeight "1.64kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/51> a mall:Electronics ;
+    rdfs:comment "의심 가격: 799원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "10th Generation Intel Core i3" ;
+    mall:hasDescription "ASUS의 ASUS Chromebook Flip C436는 강력한 성능과 품질 높은 설계로 만들어진 2-in-1 노트북으로, 다양한 작업을 처리하고 멀티태스킹을 할 수 있습니다." ;
+    mall:hasGPU "없음" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/0a49a518-808a-4604-a03e-46cb01589a75/"^^xsd:anyURI ;
+    mall:hasName "ASUS Chromebook Flip C436" ;
+    mall:hasOS "Chrome OS" ;
+    mall:hasPort "USB-C, HDMI, MicroSD 카드 리더" ;
+    mall:hasPrice 799.0 ;
+    mall:hasRAM "8GB RAM" ;
+    mall:hasResolution "1080p" ;
+    mall:hasScreenSize "14英寸" ;
+    mall:hasStorage "256GB NVMe SSD" ;
+    mall:hasWeight "約1.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/52> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "43Wh" ;
+    mall:hasCPU "인텔 코어 i5-1235U / 인텔 코어 i7-1260P" ;
+    mall:hasDescription "삼성 갤럭시 북2는 강력한 성능과 휴대성을 갖춘 초경량 노트북으로, 다양한 사용자 요구에 맞춰 중급형과 보급형 두 가지 모델이 출시되었습니다." ;
+    mall:hasGPU "Intel® UHD Graphics / Intel® Arc™ 그래픽" ;
+    mall:hasImage "https://i.namu.wiki/i/frgxgZ6ynG0SMbnsDujsnZLykrRE-zHpD7ZLlRXHyArc03dByJq35HSiBLdV5u8Z8sfzu65KMK4ir-H2AVDmB3YWBy_f-VLH6W7HXTDNnj8nt6f-ZHnKGkZT92luveK8kMFbsQOhiai3gpLCbGy6uQ.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북2" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPort "USB-C *2, USB-A *2, MicroSD, HDMI" ;
+    mall:hasPrice 0.0 ;
+    mall:hasRAM "8GB DDR4 / 16GB LPDDR5X" ;
+    mall:hasResolution "1920x1080(FHD) / 1920x1080(FHD)" ;
+    mall:hasScreenSize "15.6인치 (39.6cm)" ;
+    mall:hasStorage "256GB SSD / 512GB NVMe SSD" ;
+    mall:hasWeight "약 1.41kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/53> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 i7-11세대" ;
+    mall:hasDescription "LG 그램 15Z90S-GA5VK은 강력한 성능과 가벼운 무게로 만족스러운 사용 경험을 제공합니다. 이 노트북은 최신 인텔 코어 프로세서와 높은 해상도 디스플레이를 갖추고 있습니다." ;
+    mall:hasGPU "없음" ;
+    mall:hasImage "https://www.lge.co.kr/lg5-common/images/common/share/share-default.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 15Z90S-GA5VK" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 107400.0 ;
+    mall:hasRAM "8GB DDR4" ;
+    mall:hasResolution "3000x2000" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.39kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/54> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "Intel Core i5-1340P" ;
+    mall:hasDescription "HP 엘리트북 840 G10은 강력한 성능과 뛰어난 휴대성으로 문서작업 및 사무 작업을 위한 최적의 선택입니다. Intel Core i5-1340P 프로세서와 16GB DDR5 RAM, WUXGA(1920 x 1200) 해상도 디스플레이를 갖추고 있습니다." ;
+    mall:hasGPU "Intel® Iris® Xe Graphics" ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/hp-elitebook-840-g10-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "HP EliteBook 840 G10" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 780000.0 ;
+    mall:hasRAM "16GB DDR5-5200MHz" ;
+    mall:hasResolution "WUXGA(1920 x 1200)" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "약 1.5kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/55> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "48Wh 배터리" ;
+    mall:hasCPU "Intel Core i7-12700H" ;
+    mall:hasDescription "Acer의 Nitro 5 시리즈 노트북은 강력한 인텔 i7 프로세서와 NVIDIA GeForce RTX 3060 그래픽을 탑재하여 고성능 게임 및 엔터테인먼트를 위한 완벽한 선택입니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 3060" ;
+    mall:hasImage "https://photo3.enuri.info/data/images/service/dnw/master/29034000/29034778.jpg"^^xsd:anyURI ;
+    mall:hasName "Acer Nitro 5 AN515-52 i7 BOOST용" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1299500.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasScreenSize "15.6英寸 FHD (1920x1080) IPS 디스플레이, 144Hz 주사율" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "2.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/56> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "Not specified in the provided information" ;
+    mall:hasCPU "Intel Core i7" ;
+    mall:hasColor "Black" ;
+    mall:hasDescription "슬림한 디자인과 강력한 성능을 자랑하는 MSI의 사이보그 15 A13V 노트북은 학생과 이동이 많은 직장인에게 이상적인 선택입니다. 최신 인텔 코어 i7 프로세서와 엔비디아 RTX 4060 그래픽 카드를 탑재한 이 노트북은 뛰어난 성능을 제공합니다." ;
+    mall:hasGPU "NVIDIA RTX 4060" ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/msi-cyborg-15-2025-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "MSI Cyborg 15 A13V" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 3817000.0 ;
+    mall:hasRAM "16GB DDR5" ;
+    mall:hasScreenSize "FHD 144Hz" ;
+    mall:hasStorage "NVMe PCIe Gen 4 SSD 1TB" ;
+    mall:hasWeight "1.98kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/57> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "75 Wh" ;
+    mall:hasCPU "AMD Ryzen™ 9 8945HS" ;
+    mall:hasDescription "ASUS VivoBook S15 OLED는 Qualcomm Snapdragon X Elite 프로세서를 사용하여 최대 18시간의 원활한 생산성을 제공하는 스마트한 사용자를 위한 AI 기반 노트북입니다. 가벼운 무게와 두께, 생생한 3K 120Hz OLED 디스플레이를 갖춘 이 제품은 휴대성과 멀티미디어 경험을 극대화합니다." ;
+    mall:hasGPU "AMD Radeon™ Graphics" ;
+    mall:hasImage "https://techpp.com/wp-content/uploads/2023/05/asus-vivobook-s15-oled-review.jpg"^^xsd:anyURI ;
+    mall:hasName "ASUS VivoBook S15 OLED" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 940000.0 ;
+    mall:hasRAM "32 GB RAM" ;
+    mall:hasResolution "120Hz" ;
+    mall:hasScreenSize "3K (3000 x 2000)" ;
+    mall:hasStorage "1TB PCIe 4.0 SSD" ;
+    mall:hasWeight "1.47cm" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/58> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Apple M1" ;
+    mall:hasDescription "Apple의 강력한 Apple Silicon M1 칩을 탑재한 MacBook Air 13인치 노트북은 최대 8코어 CPU와 7/8코어 GPU를 통해 빠른 처리 속도와 품질 높은 그래픽을 제공합니다." ;
+    mall:hasGPU "7/8코어" ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111883_macbookair.png"^^xsd:anyURI ;
+    mall:hasName "MacBook Air 13 M1" ;
+    mall:hasOS "macOS Big Sur" ;
+    mall:hasPrice 949000.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasStorage "512GB SSD" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/59> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "Dell의 고성능 노트북으로, 강력한 성능과 다양한 기능을 제공합니다. 이 제품은 사용자 친화적인 디자인과 품질이 뛰어난 하드웨어로 인해 학습 및 업무에 이상적입니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://i.dell.com/is/image/DellContent//content/dam/images/products/laptops-and-2-in-1s/vostro/15-3500-non-touch/dv3500nt-cnb-05000ff090-bk.psd?qlt=95&fit=constrain,1&hei=400&wid=570&fmt=jpg"^^xsd:anyURI ;
+    mall:hasName "Dell Vostro 15 3000" ;
+    mall:hasOS "Windows 10/11" ;
+    mall:hasPort "USB Type-C, HDMI, SD 카드 리더, 마이크 스피어, 포터블 전원 배터리 충전기" ;
+    mall:hasPrice 98255.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/60> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Lenovo IdeaPad Pro 5 Pro는 놀라운 2.8K OLED 디스플레이를 갖춘 강력한 프로세서와 AI 기능으로 구동되는 16인치 노트북입니다." ;
+    mall:hasImage "https://example.com/lenovo-ideapad-pro-5-pro.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo IdeaPad Pro 5 Pro (16인치 AMD)" ;
+    mall:hasPrice 949000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/61> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "이 노트북은 인텔® 코어™ i5-13500H 프로세서와 NVMe M.2 1TB 저장공간을 탑재한 40.6cm (16 inch) 화면 크기의 강력한 성능을 가진 제품입니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "HP Pavilion Plus 16 inch Laptop PC 16-ab0000 (8V889AV)" ;
+    mall:hasPrice 167399.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/62> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "96Wh" ;
+    mall:hasCPU "Intel Core i7" ;
+    mall:hasDescription "ASUS의 ASUS ZenBook Flip 15는 휴대용으로 사용하기에도 강력한 성능을 자랑하는 2in1 노트북입니다. 15.6인치 AMOLED 디스플레이와 최신 인텔 코어 프로세서를 탑재하여 다양한 작업에 최적화되었습니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/29aec839-62d4-4794-ab9b-a0a7a91d86c1/"^^xsd:anyURI ;
+    mall:hasName "ASUS ZenBook Flip 15" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI" ;
+    mall:hasPrice 3490000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "1920x1080" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.7kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/63> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "약 7시간 사용 가능" ;
+    mall:hasCPU "스냅드래곤 8cx Gen 2" ;
+    mall:hasDescription "삼성전자의 갤럭시 북 Go LTE는 스냅드래곤 8cx Gen 2 프로세서와 256GB UFS 스토리지가 탑재된 휴대용 노트북으로, 최신 기술을 가진 보급형 제품입니다." ;
+    mall:hasImage "https://images.samsung.com/kdp/display/gnb/05184ed7-2d9a-4468-b4ee-4a9847b9d630.png"^^xsd:anyURI ;
+    mall:hasName "삼성전자 갤럭시 북 Go LTE (NP345XLAA)" ;
+    mall:hasOS "Windows 10" ;
+    mall:hasPrice 1030000.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "1920x1080" ;
+    mall:hasScreenSize "13.3인치" ;
+    mall:hasStorage "256GB UFS" ;
+    mall:hasWeight "約1.4kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/64> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "LG 그램 14인치 노트북은 강력한 성능과 가벼운 무게로 학업, 업무, 여행 등 다양한 상황에서 사용하기에 최적입니다. 8세대 인텔 코어 i5-8265U와 8GB DDR3L 메모리, 512GB SSD를 탑재한 이 노트북은 빠른 처리 속도와 품질적인 사용 경험을 제공합니다." ;
+    mall:hasImage "https://www.lge.co.kr/lg5-common/images/common/share/share-default.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 14Z90U-GS59K" ;
+    mall:hasPrice 4999000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/65> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "HP ProBook 455 G10은 AMD Ryzen™ 5 - 7530U 프로세서와 16GB RAM, 256GB SSD를 탑재한 고성능 사무용 노트북입니다. 39.6cm(15.6인치) 화면과 FHD 해상도를 갖추고 있으며, Windows 운영체제로 최적화되었습니다." ;
+    mall:hasImage "https://www.batterybuy.kr/Images/cart.png"^^xsd:anyURI ;
+    mall:hasName "HP ProBook 455 G10" ;
+    mall:hasPrice 769000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/66> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "53Wh" ;
+    mall:hasCPU "Intel Core Ultra(시리즈 2)" ;
+    mall:hasDescription "Acer Swift Go 14 AI OLED SFG14-75은 Intel Core Ultra(시리즈 2) 프로세서와 최대 32GB LPDDR5X 메모리, 512GB NVMe SSD를 탑재한 휴대성과 성능을 모두 갖춘 AI 노트북입니다." ;
+    mall:hasGPU "내장 그래픽 (Arc 7core)" ;
+    mall:hasImage "https://www.notebookcheck.net/fileadmin/templates/images/moon-filled.svg"^^xsd:anyURI ;
+    mall:hasName "Acer Swift Go 14 AI OLED SFG14-75" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 949000.0 ;
+    mall:hasRAM "32GB LPDDR5X" ;
+    mall:hasResolution "2880x1800(WQXGA)" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "1.32kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/67> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "30Whr" ;
+    mall:hasCPU "Intel Core i7" ;
+    mall:hasColor "베이지 무스" ;
+    mall:hasDescription "MSI Modern 14는 최신 10세대 Intel Core i7 프로세서를 탑재한 고성능과 뛰어난 휴대성을兼ね備えた 노트북입니다. 다양한 색상으로 선택할 수 있으며, 가벼운 무게와 슬림한 디자인을 자랑합니다." ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/msi-modern-14-2021-ryzen-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "MSI Modern 14" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 573610.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasScreenSize "13.4英寸, FHD IPS 패널" ;
+    mall:hasStorage "512GB SSD" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/68> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-13th Gen" ;
+    mall:hasDescription "ASUS ExpertBook B5 FlipCare는 최신 Intel 프로세서와 고성능 그래픽을 탑재한 강력한 노트북으로, 업무 효율성을 높이는 디자인과 기능을 제공합니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics" ;
+    mall:hasImage "https://www.manua.ls/thumbs/products/l/1832567-asus-expertbook-b5-flip.webp"^^xsd:anyURI ;
+    mall:hasName "ASUS ExpertBook B5 FlipCare" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1299000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "13.3인치" ;
+    mall:hasStorage "2TB SSD" ;
+    mall:hasWeight "約1.2kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/69> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "8코어 CPU(성능 코어 4개 및 효율 코어 4개)" ;
+    mall:hasDescription "Apple의 프로용 노트북 MacBook Pro 13인치에 Apple M2 칩이 탑재되어 최신 성능을 자랑합니다. 8코어 CPU와 10코어 GPU를 갖춘 이 제품은 액티브 쿨링 시스템과 선명한 Retina 디스플레이, FaceTime HD 카메라 등 프로급 기능을 제공합니다." ;
+    mall:hasGPU "10코어 GPU" ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111869_sp870-macbook-pro-13-in-m2-2022.png"^^xsd:anyURI ;
+    mall:hasName "MacBook Pro (13-inch, M2, 2022)" ;
+    mall:hasOS "Apple OS (macOS)" ;
+    mall:hasPrice 599000.0 ;
+    mall:hasRAM "8GB 통합 메모리" ;
+    mall:hasStorage "256GB SSD 저장 장치" ;
+    mall:hasWeight "약 1.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/70> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Dell의 Dell Inspiron 16 5000 (5625) 노트북은 16:10 화면 비율 디스플레이와 Radeon 그래픽이 탑재된 AMD 모바일 프로세서를 제공하여 요구 사항을 충족하고 잠재력을 촉진합니다." ;
+    mall:hasImage "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/inspiron-notebooks/16-5625/pdp/laptop-inspiron-16-5625-pdp-hero.psd?qlt=95&fit=constrain,1&hei=350&wid=504&fmt=png-alpha"^^xsd:anyURI ;
+    mall:hasName "Dell Inspiron 16 5000 (5625)" ;
+    mall:hasPrice 1250000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/71> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-12500H" ;
+    mall:hasDescription "Lenovo ThinkBook Plus Gen 3는 17.3인치 초광량 3K 디스플레이와 8인치 화면을 갖춘 완벽한 듀얼 디스플레이 멀티태스킹 비즈니스 노트북입니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics (Integrated)" ;
+    mall:hasImage "https://example.com/lenovo-thinkbook-plus-gen3.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo ThinkBook Plus Gen 3" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C x2, USB-A x2, HDMI, DP Alt Mode" ;
+    mall:hasPrice 2499000.0 ;
+    mall:hasRAM "최대 32GB DDR5" ;
+    mall:hasResolution "초광량 3K" ;
+    mall:hasScreenSize "17.3인치" ;
+    mall:hasStorage "최대 2TB NVMe SSD" ;
+    mall:hasWeight "약 1.4kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/72> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "68Wh" ;
+    mall:hasCPU "Intel Core i7-1355U vPro" ;
+    mall:hasDescription "HP 엘리트 드래곤플라이 G4는 강력한 성능과 이동성을 갖춘 비즈니스용 노트북으로, 높은 해상도와 터치스크린 기능을 통해 효율적인 작업이 가능합니다." ;
+    mall:hasGPU "Intel Iris Xe" ;
+    mall:hasImage "https://img.danawa.com/prod_img/500000/349/074/img/32074349_1.jpg?shrink=360:360&_v=20251021151840"^^xsd:anyURI ;
+    mall:hasName "HP Elite Dragonfly G4" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI" ;
+    mall:hasPrice 1095000.0 ;
+    mall:hasRAM "16GB LPDDR5" ;
+    mall:hasResolution "WQHD+ (3200x2000)" ;
+    mall:hasScreenSize "13.5인치" ;
+    mall:hasStorage "1TB SSD" ;
+    mall:hasWeight "1.1kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/73> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i3" ;
+    mall:hasDescription "ASUS Chromebook CX9는 빠른 프로세서와 강력한 저장공간을 갖춘 휴대용 노트북으로, 업무 및 개인 사용 모두에 적합합니다." ;
+    mall:hasImage "https://cdn.mos.cms.futurecdn.net/W2dtfixRm6ePPZcyn8Ht8m-2100-80.jpg"^^xsd:anyURI ;
+    mall:hasName "ASUS Chromebook CX9" ;
+    mall:hasOS "Chrome OS" ;
+    mall:hasPrice 749990.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasResolution "Full HD (1,920-by-1,080-pixel)" ;
+    mall:hasScreenSize "14.0인치" ;
+    mall:hasStorage "128GB SSD" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/74> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "약 5시간 사용 가능" ;
+    mall:hasCPU "Intel Core™ Ultra" ;
+    mall:hasDescription "삼성의 갤럭시 북 시리즈 중 하나로, 강력한 성능과 휴대성을兼ね備えた 모바일 노트북입니다. 인텔 최신 칩셋을 탑재하여 AI PC에 최적화된 퍼포먼스를 제공합니다." ;
+    mall:hasGPU "없음" ;
+    mall:hasImage "https://images.samsung.com/kdp/common/img-induce-benefit-4.png"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북 S" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 499000.0 ;
+    mall:hasRAM "12GB RAM" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "13.3인치" ;
+    mall:hasStorage "1TB NVMe SSD" ;
+    mall:hasWeight "約1.4kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/75> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "고해상도 디스플레이와 빠른 속도로 최적의 성능을 제공하는 슬림 디자인 노트북입니다." ;
+    mall:hasGPU "내장 그래픽" ;
+    mall:hasImage "https://www.lge.co.kr/kr/images/notebook/md09877894/md09877894-350x350.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 360 | 14T90R-GA50K" ;
+    mall:hasOS "미확인" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 1890000.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "1920x1200(WUXGA)" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/76> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-1355U" ;
+    mall:hasDescription "HP ProBook 470 G10은 업무용 노트북으로, 최신 인텔 코어 i7-1355U CPU와 NVIDIA GeForce MX550 그래픽을 탑재한 고성능 모델입니다." ;
+    mall:hasGPU "NVIDIA GeForce MX550 (2GB GDDR6)" ;
+    mall:hasImage "https://example.com/hp_probook_470_g10.jpg"^^xsd:anyURI ;
+    mall:hasName "HP ProBook 470 G10" ;
+    mall:hasOS "Windows 10 Pro" ;
+    mall:hasPrice 2999000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasScreenSize "17.3\" 1920 x 1080 Anti-Glare IPS Display" ;
+    mall:hasStorage "512GB PCIe M.2 SSD" ;
+    mall:hasWeight "2.6kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/77> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "AMD Ryzen 5 3500U" ;
+    mall:hasDescription "Acer TravelMate P4는 비즈니스 전문가용으로 디자인된 강력한 AI와 보안을 갖춘 최첨단 노트북입니다." ;
+    mall:hasGPU "없음" ;
+    mall:hasImage "https://ir.ebaystatic.com/cr/v/c1/s_1x2.gif"^^xsd:anyURI ;
+    mall:hasName "Acer TravelMate P4 TMB114" ;
+    mall:hasOS "Windows 10 Pro" ;
+    mall:hasPort "USB Type-C, USB 3.2 Gen 1 x2, HDMI, SD 카드 리더" ;
+    mall:hasPrice 0.0 ;
+    mall:hasRAM "8GB DDR4" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.49kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/78> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 i5-13세대" ;
+    mall:hasDescription "이 노트북은 강력한 인텔 코어 i5-13세대 CPU와 32GB의 메모리, 1TB SSD를 탑재하여 빠른 처리 속도와 풍부한 저장공간을 제공합니다. 1920x1080 해상도의 FHD 디스플레이로 선명하고 정확한 이미지 표현이 가능하며, 가벼운 무게와 경량 디자인으로 휴대성 또한 뛰어납니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://img.danawa.com/new/danawaApp/img/app1.gif"^^xsd:anyURI ;
+    mall:hasName "MSI 모던시리즈 모던 15 H C13M-i5 WIN11 32GB램 (SSD 1TB)" ;
+    mall:hasOS "윈도우11" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 450000.0 ;
+    mall:hasRAM "32GB" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "1TB SSD" ;
+    mall:hasWeight "약 1.9kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/79> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "90Wh" ;
+    mall:hasCPU "Intel Core i9-13900H" ;
+    mall:hasDescription "ASUS Vivobook 16X OLED는 창의적 작업이나 게임을 즐길 수 있는 강력한 성능과 높은 해상도를 갖춘 노트북입니다. 최신 13세대 인텔 코어 i9-13900H와 NVIDIA GeForce RTX 4060 Laptop GPU, 그리고 3.2K 120 Hz OLED 디스플레이가 장착되어 있습니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 4060 Laptop GPU" ;
+    mall:hasImage "https://www.asus.com/media/Odin/images/header/ROG_normal.svg"^^xsd:anyURI ;
+    mall:hasName "ASUS Vivobook 16X OLED (K3605)" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1500000.0 ;
+    mall:hasRAM "8GB DDR5" ;
+    mall:hasScreenSize "16.0英寸",
+        "3.2K 120 Hz OLED" ;
+    mall:hasStorage "SSD 512GB" ;
+    mall:hasWeight "1.72kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/80> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "100Wh" ;
+    mall:hasCPU "애플(ARM) / M1 Max" ;
+    mall:hasDescription "Apple M1 Max 칩을 탑재한 MacBook Pro 16인치 모델은 최대 32GB의 메모리와 512GB부터 1TB까지 다양한 저장공간으로 사용자의 요구에 따라 선택할 수 있습니다." ;
+    mall:hasGPU "내장 그래픽, 16코어 GPU" ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"^^xsd:anyURI ;
+    mall:hasName "MacBook Pro (16-inch, 2021) - 그레이" ;
+    mall:hasOS "macOS Monterey" ;
+    mall:hasPort "USB-C to MagSafe 3 케이블 포함" ;
+    mall:hasPrice 4855530.0 ;
+    mall:hasRAM "32GB" ;
+    mall:hasScreenSize "16.2인치" ;
+    mall:hasStorage "512GB부터 1TB까지 선택 가능" ;
+    mall:hasWeight "2.1kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/82> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "이 노트북은 인텔® 코어™ Ultra 프로세서를 사용하여 AI 효율성을 자랑하는 16인치 AI 노트북입니다. PureSight Pro 디스플레이, Premium Suite 등의 특징을 가지고 있습니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "Lenovo Yoga Pro 9i Gen 10 Aura Edition (16'' Intel)" ;
+    mall:hasPrice 2999000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/83> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-13700H" ;
+    mall:hasColor "Black" ;
+    mall:hasDescription "HP Pavilion Plus 16은 최신 인텔 코어 i7-13700H와 RTX 3050 6GB GPU를 탑재한 고성능 멀티미디어 노트북으로, 업무용과 게이밍 용도 모두 충분히 지원합니다. 품질 높은 디스플레이와 지문 스캐너 기능을 갖추고 있습니다." ;
+    mall:hasGPU "NVIDIA RTX 3050 6GB" ;
+    mall:hasImage "https://www.notebookcheck.net/fileadmin/Notebooks/HP/Pavilion_Plus_16-ab0456tx/pavilion_plus_16_2.jpg"^^xsd:anyURI ;
+    mall:hasName "HP Pavilion Plus 16 (2024)" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1690000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "2560x1600" ;
+    mall:hasStorage "SSD 512GB" ;
+    mall:hasWeight "2.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/84> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "최고의 이동성을 위해 설계된 1cm 두께, 1kg의 가벼운 울트라포터블 노트북. 효율적인 13세대 Intel® Core™ 프로세서로 강력해졌으며 선명하고 생생한 비주얼을 제공하는 뛰어난 13.3” 16:10 2.8K OLED HDR 나노엣지 디스플레이가 특징입니다." ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/be7c6c88-3a9e-4d6f-ac2d-25d2b1e20ea7/"^^xsd:anyURI ;
+    mall:hasName "ASUS Zenbook S 13 OLED (UX5304)" ;
+    mall:hasPrice 949000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/85> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "Intel Core™ Ultra 프로세서 시리즈 7" ;
+    mall:hasDescription "삼성의 고사양 노트북으로, 강력한 프로세서와 외장 그래픽을 탑재하여 최고 성능을 자랑합니다. 터치스크린과 강력한 AI 기술이 적용되어 사용자 경험을 크게 향상시킵니다." ;
+    mall:hasGPU "외장 GPU (H급)" ;
+    mall:hasImage "https://i.namu.wiki/i/Va8c7-62qeW3mFf9kyLVNgBGj73x6VKjsNtBHd0pb4h2lWFFW3js---UI70VQNBptaoJq0UQ_n_cCNfQx9uRbZyRvwKNOYasJ36U8dYUtaEHsvoFTilsg_Upku8nz4B15Bl-ugIVVUtKZ-VKn4FCkw.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북 Ultra (Core™ Ultra 9 / 2TB NVMe SSD)" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 3510000.0 ;
+    mall:hasRAM "LPDDR 램 (온보드 방식)" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "40.6cm" ;
+    mall:hasStorage "2TB NVMe SSD" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/86> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 울트라5" ;
+    mall:hasDescription "고해상도 디스플레이와 빠른 속도로 최적의 성능을 제공하는 슬림 디자인 노트북입니다. 이 제품은 인텔 코어 울트라5 CPU를 사용하며, 125H (4.5GHz) 주파수를 가집니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://www.lge.co.kr/kr/images/notebook/md09877894/md09877894-350x350.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 360 | 14T90S-GA50K" ;
+    mall:hasOS "윈도우11 홈" ;
+    mall:hasPort "미확인" ;
+    mall:hasPrice 3700000.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "1920x1200(WUXGA)" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "SSD 512GB" ;
+    mall:hasWeight "1.25kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/87> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "HP 파빌리온 X360 14-dw는 터치스크린과 14인치 고해상도 디스플레이를 갖춘 모바일 노트북으로, 다양한 작업을 위한 완벽한 선택입니다." ;
+    mall:hasImage "https://i.ebayimg.com/images/g/lDYAAOSwaENj9KYD/s-l400.jpg"^^xsd:anyURI ;
+    mall:hasName "HP Pavilion x360 14-dw" ;
+    mall:hasPrice 599900.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/88> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "이 세련된 노트북은 다양한 색상 뒤에 강력한 프로세서와 그래픽을 숨겨 있으며, 화면 대 본체 비율이 뛰어나 사용자의 노트북 성능을 최대한 활용할 수 있습니다." ;
+    mall:hasImage "https://www.notebookcheck.net/fileadmin/Notebooks/Acer/Aspire_5_A515-57G-58R7/4zu3_Acer_Aspire_5_A515_57G.jpg"^^xsd:anyURI ;
+    mall:hasName "Acer Aspire 5 A515-45-R9K8" ;
+    mall:hasPrice 1208700.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/89> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-11800H" ;
+    mall:hasDescription "MSI의 최신 11세대 인텔 코어 프로세서와 NVIDIA RTX 30 시리즈 그래픽을 탑재한 고성능 게이밍 노트북으로, 모던 디자인과 강력한 성능을 자랑합니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 30 series" ;
+    mall:hasImage "https://example.com/msi-sword-17.jpg"^^xsd:anyURI ;
+    mall:hasName "MSI Sword 17 – Sharpen Your Game" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 2699000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "QHD+ 16:10" ;
+    mall:hasScreenSize "17.3인치" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "2.6kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/90> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i9-13900H" ;
+    mall:hasDescription "2023년 ASUS TUF Gaming F17은 Windows 11을 기반으로, 최대 Intel® Core™ i9-13900H CPU와 최대 NVIDIA® RTX™ 4070 Laptop GPU를 탑재한 강력한 게이밍 노트북입니다. QHD 240Hz 디스플레이로 부드럽고 선명한 플레이를 제공합니다." ;
+    mall:hasGPU "NVIDIA RTX 4070 Laptop GPU" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/954a896a-8b19-472b-a533-0041271a7c67/"^^xsd:anyURI ;
+    mall:hasName "ASUS TUF Gaming F17 (2023)" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1599000.0 ;
+    mall:hasRAM "16GB DDR5" ;
+    mall:hasResolution "QHD (2560x1600)" ;
+    mall:hasStorage "SSD 512GB" ;
+    mall:hasWeight "2.6kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/91> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "M2" ;
+    mall:hasDescription "최신 Apple M2 칩을 탑재한 MacBook Air 13 노트북은 가볍고 강력한 성능으로 사용자 경험을 향상시킵니다. 8코어 CPU와 8코어 GPU를 갖춘 이 모델은 빠른 처리 속도와 고화질 디스플레이로 작업과 게임 모두에서 최적의 성능을 제공합니다." ;
+    mall:hasGPU "M2 GPU" ;
+    mall:hasImage "https://securemetrics.apple.com/b/ss/applestoreww/1/H.8--NS/0?pageName=No-Script:AOS%3A+Product+Details+-+%EB%A6%AC%ED%8D%BC%EB%B9%84%EC%89%AC+MacBook+Air+13+Apple+M2+%EC%B9%A9+%EB%AA%A8%EB%8D%B8%288%EC%BD%94%EC%96%B4+CPU+%EB%B0%8F+8%EC%BD%94%EC%96%B4+GPU%29+-+%EB%AF%B8%EB%93%9C%EB%82%98%ED%8A%B8"^^xsd:anyURI ;
+    mall:hasName "MacBook Air 13 M2" ;
+    mall:hasOS "macOS Monterey" ;
+    mall:hasPort "Thunderbolt/USB 4 포트 2개" ;
+    mall:hasPrice 1099000.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "Retina 디스플레이" ;
+    mall:hasScreenSize "13인치" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "1.39kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/93> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "Lenovo ThinkPad E16 Gen 3은 신뢰할 수 있는 성능과 AI 경험을 제공하는 16인치 1620*920 해상도의 AMD Ryzen™ 200 시리즈 프로세서를 탑재한 비즈니스용 노트북입니다." ;
+    mall:hasImage "https://www.notebookcheck.net/fileadmin/templates/images/moon-filled.svg"^^xsd:anyURI ;
+    mall:hasName "Lenovo ThinkPad E16 Gen 3(16인치 AMD)" ;
+    mall:hasPrice 1549730.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/94> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-1165G7" ;
+    mall:hasDescription "Precision crafted with a unibody CNC aluminum design, the HP EliteBook x360 1040 G8 노트북은 최신 기술과 강력한 성능을 제공하며, 고급 사양과 안전 기능으로 업무와 개인 사용 모두에 적합합니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics" ;
+    mall:hasImage "https://i.ebayimg.com/images/g/sowAAeSwASBpv8ta/s-l400.jpg"^^xsd:anyURI ;
+    mall:hasName "HP EliteBook x360 1040 G8 노트북 PC" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 2599000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "FHD (1920 x 1080)" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "1.35kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/95> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-8650U" ;
+    mall:hasDescription "아수스의 프로 브리프 플립 14인치 2in1 노트북은 강력한 성능과 휴대성으로 문서작업, 웹서핑, 유튜브 시청 등 다양한 작업을 원활하게 지원합니다." ;
+    mall:hasGPU "Intel UHD Graphics 630" ;
+    mall:hasImage "https://www.asus.com/us/support/ASUSProBookFlip14/"^^xsd:anyURI ;
+    mall:hasName "ASUS ProBook Flip 14" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 3599000.0 ;
+    mall:hasRAM "8GB DDR4" ;
+    mall:hasResolution "FHD 1920 x 1080" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "1.49kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/96> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "11200mAh" ;
+    mall:hasCPU "Snapdragon 8 Gen 2" ;
+    mall:hasDescription "삼성전자가 최신 프리미엄 태블릿 시리즈인 갤럭시 탭 S9 Ultra를 공개했습니다. 이 제품은 최상위 모델로, IP68 등급 방수•방진 기능을 지원하며, 선명한 다이나믹 아몰레드 2X 디스플레이와 강력한 성능의 스냅드래곤 8 Gen 2 프로세서를 탑재합니다." ;
+    mall:hasImage "https://i.namu.wiki/i/hks06adLu9Hugi26PDazggsqF47upJRILn6hT9Y_VO3K6Zer_CgShwAU6AaxTSySHx0UcH3IJ-zWnz69EaQf5rb7l9GJEkPpViHsofpZD6mDgL7677-8Yc1n2HOPfX3Dg7BIZQ7UW6au65VufVZ66w.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 S9 Ultra" ;
+    mall:hasOS "안드로이드" ;
+    mall:hasPrice 1099000.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "1440 x 2560" ;
+    mall:hasScreenSize "14.6인치" ;
+    mall:hasStorage "1024GB" ;
+    mall:hasWeight "約738g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/97> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasCPU "Apple M2" ;
+    mall:hasDescription "Apple의 막강한 성능을 자랑하는 iPad Pro 12.9인치 모델은 최신 Apple M2 칩셋과 뛰어난 디스플레이를 통해 탁월한 사용자 경험을 제공합니다." ;
+    mall:hasImage "https://i.namu.wiki/i/oMFBSwHGbtmDbDIacSpeFbmap9G-lSVnzUCNW-NV6VvwsztmncvewUTKrAvU_WK_A-6aO7-aXSBEnSylvzg7-A.svg"^^xsd:anyURI ;
+    mall:hasName "iPad Pro 12.9 M2" ;
+    mall:hasOS "iPadOS 16" ;
+    mall:hasPrice 1099000.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "Liquid Retina XDR 디스플레이" ;
+    mall:hasScreenSize "12.9인치" ;
+    mall:hasStorage "2048GB" ;
+    mall:hasWeight "682g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/98> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasDescription "LG 유플러스에서 출시한 Apple iPad Pro 12.9인치 모델은 최신 Apple M2 칩셋을 탑재하고 있으며, 고해상도 Liquid Retina 디스플레이와 품질 높은 앱 경험을 제공합니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "LG 패드 프로 12.9" ;
+    mall:hasPrice 0.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/99> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "5900mAh" ;
+    mall:hasCPU "MT8176" ;
+    mall:hasDescription "에이수스의 ASUS ZenPad 3S 10 Z500M 태블릿은 9.7인치 화면을 가진 고성능 모바일 기기로, 최신 Android 운영체제를 지원합니다." ;
+    mall:hasImage "https://fdn2.gsmarena.com/vv/bigpic/asus-zenpad-3s.jpg"^^xsd:anyURI ;
+    mall:hasName "ASUS ZenPad 3S 10 Z500M" ;
+    mall:hasOS "구글 안드로이드 7.0" ;
+    mall:hasPrice 398270.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "1280 x 800" ;
+    mall:hasScreenSize "9.7인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約305g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/1> a mall:Review ;
+    mall:hasComment "정말 만족합니다. 품질이 기대 이상이에요." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/1> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/10> a mall:Review ;
+    mall:hasComment "오래 기다린 보람이 있네요. 최고입니다!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/5> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/11> a mall:Review ;
+    mall:hasComment "기대 이상의 제품입니다. 만족도 100%." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/6> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/12> a mall:Review ;
+    mall:hasComment "좋은 제품이에요. 다만 포장이 살짝 아쉬웠습니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/6> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/13> a mall:Review ;
+    mall:hasComment "전반적으로 만족합니다. 편의성이 뛰어나요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/7> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/14> a mall:Review ;
+    mall:hasComment "정말 좋아요. 사진과 동일한 제품이 왔습니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/7> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/15> a mall:Review ;
+    mall:hasComment "품질과 가격 모두 만족스럽습니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/8> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/16> a mall:Review ;
+    mall:hasComment "훌륭한 제품이에요. 오래 쓸 것 같습니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/8> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/17> a mall:Review ;
+    mall:hasComment "좋은 품질이고 내구성도 좋아보입니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/9> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/18> a mall:Review ;
+    mall:hasComment "재구매했습니다. 역시 믿고 살 수 있는 제품이에요." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/9> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/19> a mall:Review ;
+    mall:hasComment "사용감이 좋습니다. 추천합니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/10> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/2> a mall:Review ;
+    mall:hasComment "가성비 최고에요. 강력 추천합니다!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/1> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/20> a mall:Review ;
+    mall:hasComment "최고의 선택이었어요. 후회 없습니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/10> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/21> a mall:Review ;
+    mall:hasComment "보통이에요. 나쁘지는 않지만 특별하지도 않습니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/11> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/22> a mall:Review ;
+    mall:hasComment "평범한 제품입니다. 가격에 맞는 품질이에요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/11> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/23> a mall:Review ;
+    mall:hasComment "그럭저럭 쓸 만해요. 기대치가 높았나봐요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/12> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/24> a mall:Review ;
+    mall:hasComment "무난합니다. 딱히 불만은 없어요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/12> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/25> a mall:Review ;
+    mall:hasComment "평균 수준의 제품이에요. 더 좋은 걸 기대했습니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/13> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/26> a mall:Review ;
+    mall:hasComment "괜찮아요. 가격 대비 적당합니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/13> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/27> a mall:Review ;
+    mall:hasComment "보통입니다. 다음엔 다른 제품을 고려해볼 것 같아요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/14> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/28> a mall:Review ;
+    mall:hasComment "나쁘지 않아요. 기능은 충실합니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/14> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/29> a mall:Review ;
+    mall:hasComment "평이한 제품이에요. 특별히 좋거나 나쁘지 않습니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/15> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/3> a mall:Review ;
+    mall:hasComment "성능 훌륭합니다. 매일 사용 중입니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/2> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/30> a mall:Review ;
+    mall:hasComment "그냥 그래요. 가격에 걸맞는 품질이라고 생각합니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/15> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/31> a mall:Review ;
+    mall:hasComment "무난하게 쓸 수 있어요. 크게 기대하지 말고 구매하세요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/16> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/32> a mall:Review ;
+    mall:hasComment "그럭저럭입니다. 기능은 정상 작동해요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/16> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/33> a mall:Review ;
+    mall:hasComment "초기 불량입니다. 도착하자마자 작동 안 해요." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/20> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/34> a mall:Review ;
+    mall:hasComment "기대 이하입니다. 광고와 너무 다른 제품이에요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/20> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/35> a mall:Review ;
+    mall:hasComment "환불 고민 중입니다. 품질이 너무 떨어져요." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/21> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/36> a mall:Review ;
+    mall:hasComment "실망스럽습니다. 재구매 의사 없어요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/21> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/37> a mall:Review ;
+    mall:hasComment "품질이 많이 아쉽습니다. 돈이 아깝네요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/22> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/38> a mall:Review ;
+    mall:hasComment "전혀 추천하지 않아요. 사진과 완전히 달랐습니다." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/22> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/39> a mall:Review ;
+    mall:hasComment "불만족스럽습니다. 내구성이 너무 약해요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/23> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/4> a mall:Review ;
+    mall:hasComment "전반적으로 좋아요. 디자인이 마음에 듭니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/2> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/40> a mall:Review ;
+    mall:hasComment "최악입니다. 구매를 후회합니다." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/23> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/41> a mall:Review ;
+    mall:hasComment "품질이 형편없습니다. 바로 교환 신청했습니다." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/24> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/42> a mall:Review ;
+    mall:hasComment "사용 첫날에 고장났습니다. 절대 비추천이에요." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/24> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/43> a mall:Review ;
+    mall:hasComment "기대 이하의 제품입니다. 아쉬움이 많이 남아요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/25> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/44> a mall:Review ;
+    mall:hasComment "가격 대비 품질이 너무 낮습니다. 비추천이에요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/25> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/45> a mall:Review ;
+    mall:hasComment "정말 놀랍도록 좋은 제품이에요!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/30> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/46> a mall:Review ;
+    mall:hasComment "제 제품만 불량인가요? 너무 실망스럽습니다." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/30> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/47> a mall:Review ;
+    mall:hasComment "완벽한 제품이에요. 강력 추천합니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/31> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/48> a mall:Review ;
+    mall:hasComment "품질 편차가 심한 것 같아요. 불량품이 왔습니다." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/31> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/49> a mall:Review ;
+    mall:hasComment "최고의 제품이에요. 이 가격에 이 품질이라니!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/32> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/5> a mall:Review ;
+    mall:hasComment "성능이 정말 뛰어나요. 매일 사용 중입니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/3> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/50> a mall:Review ;
+    mall:hasComment "도착했는데 박스가 찌그러져 있었어요. 초기 불량입니다." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/32> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/51> a mall:Review ;
+    mall:hasComment "가성비 갑입니다. 이 가격에 이런 품질이라니 놀랍네요." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/40> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/52> a mall:Review ;
+    mall:hasComment "저렴하고 품질도 좋아요. 재구매 예정입니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/40> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/53> a mall:Review ;
+    mall:hasComment "가격 대비 성능이 훌륭합니다. 강추합니다!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/41> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/54> a mall:Review ;
+    mall:hasComment "합리적인 가격에 좋은 품질이에요. 만족합니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/41> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/55> a mall:Review ;
+    mall:hasComment "이 가격에 이 품질이라니 정말 믿기지 않아요. 최고!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/42> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/56> a mall:Review ;
+    mall:hasComment "가성비 좋은 제품이에요. 적극 추천합니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/42> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/57> a mall:Review ;
+    mall:hasComment "합리적인 선택이었어요. 품질도 기대 이상입니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/43> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/58> a mall:Review ;
+    mall:hasComment "좋은 품질의 가성비 제품이에요. 만족스럽습니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/43> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/59> a mall:Review ;
+    mall:hasComment "완전 대만족! 주변 지인들에게도 다 추천했어요." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/44> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/6> a mall:Review ;
+    mall:hasComment "배송도 빠르고 제품도 훌륭해요. 재구매 의사 있습니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/3> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/60> a mall:Review ;
+    mall:hasComment "좋은 제품이에요. 가격도 적당하고 품질도 만족스럽습니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/44> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/61> a mall:Review ;
+    mall:hasComment "휴대성과 성능 모두 만족스럽습니다. 출장용으로 최고예요." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/100> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/62> a mall:Review ;
+    mall:hasComment "화면이 선명하고 사용감도 좋아요. 만족합니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/100> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/63> a mall:Review ;
+    mall:hasComment "무난한 태블릿이에요. 가격대를 생각하면 적당합니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/101> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/64> a mall:Review ;
+    mall:hasComment "필기감이 좋고 영상 시청에도 무리 없습니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/101> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/65> a mall:Review ;
+    mall:hasComment "디스플레이 품질이 정말 좋아요. 노트 필기에 최적입니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/102> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/66> a mall:Review ;
+    mall:hasComment "발열이 좀 있어요. 장시간 사용하면 뜨거워집니다." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/102> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/67> a mall:Review ;
+    mall:hasComment "가벼워서 휴대하기 편하고 배터리도 오래갑니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/103> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/68> a mall:Review ;
+    mall:hasComment "보통 수준의 태블릿입니다. 특별한 점은 없어요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/103> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/69> a mall:Review ;
+    mall:hasComment "스타일러스 펜 인식이 정말 정확해요. 그림 그리기 좋습니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/104> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/7> a mall:Review ;
+    mall:hasComment "품질 좋습니다. 가격 대비 만족도 높아요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/4> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/70> a mall:Review ;
+    mall:hasComment "전반적으로 만족합니다. 회의용으로 잘 쓰고 있어요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/104> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/71> a mall:Review ;
+    mall:hasComment "터치 반응이 너무 느립니다. 이 가격에 실망스러워요." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/106> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/72> a mall:Review ;
+    mall:hasComment "그럭저럭 쓸 만해요. 배터리 시간이 좀 짧은 편입니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/106> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/73> a mall:Review ;
+    mall:hasComment "화면 크기가 적당하고 무게도 가벼워서 좋아요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/107> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/74> a mall:Review ;
+    mall:hasComment "기대 이상의 성능이에요. 멀티태스킹도 잘 됩니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/107> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/75> a mall:Review ;
+    mall:hasComment "초기 설정이 너무 복잡해요. 사용설명서가 부실합니다." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/109> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/76> a mall:Review ;
+    mall:hasComment "디자인이 깔끔하고 마감도 좋습니다. 만족스러워요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/109> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/77> a mall:Review ;
+    mall:hasComment "평범한 태블릿이에요. 대중적으로 무난한 선택입니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/110> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/78> a mall:Review ;
+    mall:hasComment "영상 편집까지도 가능한 성능이에요. 정말 추천합니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/110> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/79> a mall:Review ;
+    mall:hasComment "가성비가 훌륭합니다. 학생용으로 딱이에요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/111> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/8> a mall:Review ;
+    mall:hasComment "완벽한 제품이에요. 주변에도 추천했습니다." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/4> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/80> a mall:Review ;
+    mall:hasComment "스피커 음질이 너무 빈약합니다. 이어폰 필수예요." ;
+    mall:hasRating 2 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/111> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/81> a mall:Review ;
+    mall:hasComment "프리미엄 태블릿의 진수를 보여줍니다. 강력 추천!" ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/112> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/82> a mall:Review ;
+    mall:hasComment "기본기에 충실한 태블릿이에요. 가격에 맞는 성능입니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/112> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/83> a mall:Review ;
+    mall:hasComment "업무용으로 잘 쓰고 있어요. 성능이 안정적입니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/113> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/84> a mall:Review ;
+    mall:hasComment "배송 중 액정에 흠집이 있었어요. 교환 신청했습니다." ;
+    mall:hasRating 1 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/113> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/85> a mall:Review ;
+    mall:hasComment "휴대성이 정말 좋고 화면도 선명합니다. 만족스러워요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/114> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/86> a mall:Review ;
+    mall:hasComment "그저 그런 태블릿이에요. 특출난 점은 없습니다." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/114> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/87> a mall:Review ;
+    mall:hasComment "워크스테이션급 성능에 만족합니다. 전문 작업에 최적이에요." ;
+    mall:hasRating 5 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/81> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/88> a mall:Review ;
+    mall:hasComment "안정적인 성능과 견고한 마감이 인상적입니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/81> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/89> a mall:Review ;
+    mall:hasComment "성능은 괜찮지만 가격대비 약간 아쉬운 면이 있어요." ;
+    mall:hasRating 3 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/92> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/9> a mall:Review ;
+    mall:hasComment "사용하기 편리하고 기능도 충실해요." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/5> .
+
+<https://fastcampus.co.kr/data_online_ontology2/review/90> a mall:Review ;
+    mall:hasComment "고성능 그래픽 작업도 무리 없이 처리합니다. 추천합니다." ;
+    mall:hasRating 4 ;
+    mall:reviewOf <https://fastcampus.co.kr/data_online_ontology2/product/92> .
+
+<https://fastcampus.co.kr/data_online_ontology2/category/2> a mall:Category ;
+    mall:hasCategoryName "전자제품" ;
+    mall:hasDescription "전자제품 카테고리" .
+
+:Category a owl:Class .
+
+<https://fastcampus.co.kr/data_online_ontology2/category/3> a mall:Category ;
+    mall:hasCategoryName "데스크탑" ;
+    mall:hasDescription "데스크탑 카테고리" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/1> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "12코어" ;
+    mall:hasDescription "Apple M2 Pro는 강력한 CPU와 GPU를 탑재한 노트북용 프로세서로, 빠른 처리 속도와 품질 높은 그래픽을 제공합니다." ;
+    mall:hasGPU "19코어" ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Apple_M2.jpg/1280px-Apple_M2.jpg"^^xsd:anyURI ;
+    mall:hasMemoryBandwidth "100GB/s" ;
+    mall:hasName "Apple M2 Pro" ;
+    mall:hasNeuralEngine "16核心" ;
+    mall:hasOS "Mac OS Ventura" ;
+    mall:hasPowerConsumption "未指定" ;
+    mall:hasPrice 1098000.0 ;
+    mall:hasProcessorArchitecture "ARM" ;
+    mall:hasRAM "16GB" ;
+    mall:hasScreenSize "未指定" ;
+    mall:hasStorage "1TB SSD" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/10> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "75Wh" ;
+    mall:hasCPU "Intel Core i7" ;
+    mall:hasDescription "ASUS VivoBook 15 OLED는 최신 프로세서와 그래픽 카드를 탑재한 휴대용 노트북으로, 뛰어난 디스플레이와 강력한 성능을 제공합니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 3050 Ti" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/89cbc6f4-2cb4-49fc-8217-9f014f85c3b5/"^^xsd:anyURI ;
+    mall:hasName "ASUS VivoBook 15 OLED" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 4999000.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.7kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/100> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "M4 칩" ;
+    mall:hasDescription "M4 칩, iPadOS 26, Apple Intelligence를 탑재한 모델. 27.6cm 또는 32.8cm Liquid Retina 디스플레이와 Apple Pencil Pro 및 Magic Keyboard 지원." ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111887_sp866-ipad-air-5gen.png"^^xsd:anyURI ;
+    mall:hasName "Apple iPad Air 5" ;
+    mall:hasOS "iPadOS 26" ;
+    mall:hasPrice 940000.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "Liquid Retina 디스플레이" ;
+    mall:hasScreenSize "27.6cm 또는 32.8cm" ;
+    mall:hasStorage "64GB, 256GB" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/101> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 9.4시간 사용 가능" ;
+    mall:hasCPU "엑시노스1380" ;
+    mall:hasDescription "삼성전자가 공개한 플래그십 Android 태블릿으로, 강력한 사양과 품질적인 디자인을 자랑합니다." ;
+    mall:hasImage "https://i.namu.wiki/i/hks06adLu9Hugi26PDazggsqF47upJRILn6hT9Y_VO3K6Zer_CgShwAU6AaxTSySHx0UcH3IJ-zWnz69EaQf5rb7l9GJEkPpViHsofpZD6mDgL7677-8Yc1n2HOPfX3Dg7BIZQ7UW6au65VufVZ66w.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 S9 (그레이, 128GB)" ;
+    mall:hasOS "Android 14 기반 One UI 6.1" ;
+    mall:hasPrice 998800.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasResolution "1440 x 2400 픽셀" ;
+    mall:hasScreenSize "12.4인치" ;
+    mall:hasStorage "128GB" ;
+    mall:hasWeight "約650g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/102> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasDescription "Apple의 맥(Mac), 아이폰(iPhone), 아이패드(AirPad), 워치(Watch), 아이라이프스(AirPods) 등 모든 Apple 제품에 대한 사용 방법 안내와 문제 해결 정보를 제공하는 공식 고객지원 사이트에서 판매되는 강력한 성능의 iPad Pro 11(4세대)입니다. M2 칩을 탑재한 이 아이패드는 초고속 Wi-Fi 6E, ProRes 동영상 촬영 옵션, 차원이 다른 Apple Pencil 호버 기능 등을 제공합니다." ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111841_ipad-pro-4gen-mainimage.png"^^xsd:anyURI ;
+    mall:hasName "iPad Pro 11(4세대) - M2" ;
+    mall:hasPrice 30000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/103> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "13.5시간 사용 가능" ;
+    mall:hasCPU "Intel 12세대" ;
+    mall:hasDescription "강력한 AI 기반의 Copilot+PC 경험과 하루 종일 지속되는 배터리를 갖춘 Microsoft Surface Pro 9는 태블릿에서 노트북으로 전환할 수 있는 유연성을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Surface_Pro_9_in_Sapphire_colour.jpg/1280px-Surface_Pro_9_in_Sapphire_colour.jpg"^^xsd:anyURI ;
+    mall:hasName "Microsoft Surface Pro 9" ;
+    mall:hasOS "Windows 11 Home or Pro" ;
+    mall:hasPrice 1250000.0 ;
+    mall:hasRAM "8GB RAM" ;
+    mall:hasResolution "2880 x 1800 픽셀" ;
+    mall:hasScreenSize "12.3인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "709克 (약 1.56磅)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/104> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "9510mAh" ;
+    mall:hasCPU "Dimensity 9000" ;
+    mall:hasDescription "OnePlus Pad는 11.61\" 크기의 디스플레이를 탑재하고 있으며, Dimensity 9000 프로세서와 256GB 저장공간을 갖추고 있습니다. 이 제품은 사용자 경험을 향상시키는 다양한 기능을 제공합니다." ;
+    mall:hasImage "https://oasis.opstatics.com/content/dam/oasis/page/2023/pad/share-pad.jpg"^^xsd:anyURI ;
+    mall:hasName "OnePlus Pad" ;
+    mall:hasOS "미확인" ;
+    mall:hasPrice 3499000.0 ;
+    mall:hasRAM "12GB RAM" ;
+    mall:hasScreenSize "11.61인치" ;
+    mall:hasStorage "256GB" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/106> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "11200mAh" ;
+    mall:hasCPU "Snapdragon 8 Gen 1" ;
+    mall:hasDescription "삼성전자가 2022년에 출시한 플래그십 Android 태블릿으로, 얇은 베젤과 높은 화면 비율을 자랑합니다. 14.6인치의 대형 디스플레이와 16GB RAM, 512GB 저장공간을 갖추고 있습니다." ;
+    mall:hasImage "https://i.namu.wiki/i/hks06adLu9Hugi26PDazggsqF47upJRILn6hT9Y_VO3K6Zer_CgShwAU6AaxTSySHx0UcH3IJ-zWnz69EaQf5rb7l9GJEkPpViHsofpZD6mDgL7677-8Yc1n2HOPfX3Dg7BIZQ7UW6au65VufVZ66w.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 S8 Ultra" ;
+    mall:hasOS "안드로이드 13" ;
+    mall:hasPrice 3990000.0 ;
+    mall:hasRAM "16GB RAM" ;
+    mall:hasResolution "S-AMOLED" ;
+    mall:hasScreenSize "14.6인치" ;
+    mall:hasStorage "512GB" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/107> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "10시간 지속 가능" ;
+    mall:hasCPU "A15 Bionic" ;
+    mall:hasDescription "Apple의 iPad mini 6세대는 8.3인치 Liquid Retina 디스플레이와 A15 Bionic 칩을 탑재한 최신 모델입니다, 이전 모델과 비교해 더욱 강력하고 효율적인 기능을 제공합니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/IPad_Mini_6_in_hand.jpg/960px-IPad_Mini_6_in_hand.jpg"^^xsd:anyURI ;
+    mall:hasName "iPad mini 6" ;
+    mall:hasOS "iPadOS" ;
+    mall:hasPrice 49000.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "Liquid Retina" ;
+    mall:hasScreenSize "8.3인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "293g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/109> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "미확인" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "HP Envy Tab 8은 휴대성을 강조한 하이브리드 태블릿으로, 다양한 용도로 활용할 수 있습니다. 10.4인치의 화면 크기와 690g의 무게는 가볍게 들고 다닐 수 있는 편리함을 제공합니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://www.hp.com/content/dam/sites/worldwide/dems/hp_og_image.jpg"^^xsd:anyURI ;
+    mall:hasName "HP Envy Tab 8" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 259800.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "10.4인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "690g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/11> a mall:Electronics ;
+    rdfs:comment "의심 가격: 106원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 울트라7" ;
+    mall:hasDescription "삼성의 강력한 성능을 자랑하는 갤럭시 북4 프로는 최신 인텔 코어 울트라7 프로세서와 뛰어난 그래픽, 풍부한 메모리 및 저장공간으로 사용자에게 업무 효율성을 제공합니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://i.namu.wiki/i/Va8c7-62qeW3mFf9kyLVNgBGj73x6VKjsNtBHd0pb4h2lWFFW3js---UI70VQNBptaoJq0UQ_n_cCNfQx9uRbZyRvwKNOYasJ36U8dYUtaEHsvoFTilsg_Upku8nz4B15Bl-ugIVVUtKZ-VKn4FCkw.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북4 프로" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 106.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "2880x1800(WQXGA+)" ;
+    mall:hasScreenSize "35.56cm" ;
+    mall:hasStorage "512GB" ;
+    mall:hasWeight "1.56kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/110> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasDescription "레노버 탭 P12는 12.7인치 Full HD+ 디스플레이와 Dimensity 7050 프로세서를 탑재한 업무 및 엔터테인먼트용 최고의 태블릿입니다." ;
+    mall:hasImage "https://fdn2.gsmarena.com/vv/bigpic/lenovo-tab-p12-new.jpg"^^xsd:anyURI ;
+    mall:hasName "Lenovo Tab P12" ;
+    mall:hasPrice 483000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/111> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 7,000mAh" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "삼성전자가 제작한 안드로이드 기반의 태블릿 컴퓨터입니다. KT 지니TV 탭으로 채택되어 2023년 8월 1일 출시되었습니다." ;
+    mall:hasImage "https://i.namu.wiki/i/Gah1P2jNtqB7m_uKpyh8d9iJL9hAOM2c0CeGKZqDtuXCm21uoOLkVXNy62c4qTZkwc5GdaWJSxr_R6Mxcy_9J2urFy_7IzQ.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 탭 A8 SM-X200" ;
+    mall:hasOS "안드로이드 12" ;
+    mall:hasPrice 495000.0 ;
+    mall:hasRAM "6GB RAM" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "10.5인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約398g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/112> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "약 10시간" ;
+    mall:hasCPU "A14 Bionic" ;
+    mall:hasDescription "Apple이 발표한 아이패드의 후속 제품으로, A14 Bionic 칩을 사용하고 있으며, 64GB 용량과 Wi-Fi 기능을 갖추고 있습니다." ;
+    mall:hasImage "https://i.namu.wiki/i/oMFBSwHGbtmDbDIacSpeFbmap9G-lSVnzUCNW-NV6VvwsztmncvewUTKrAvU_WK_A-6aO7-aXSBEnSylvzg7-A.svg"^^xsd:anyURI ;
+    mall:hasName "iPad (10세대)" ;
+    mall:hasOS "iPadOS 16.1스트레오" ;
+    mall:hasPrice 79000.0 ;
+    mall:hasRAM "4GB" ;
+    mall:hasResolution "2360 x 1640" ;
+    mall:hasScreenSize "10.9인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "約435g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/113> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "8000mAh" ;
+    mall:hasCPU "Snapdragon 8 Gen 1" ;
+    mall:hasDescription "삼성 갤럭시 탭 S8은 최신 기술을 갖춘 고급 스마트폰으로, 휴대용 노트북과 같은 역할을 수행하며, 작업 및 업무를 위한 강력한 도구입니다." ;
+    mall:hasImage "https://upload.wikimedia.org/wikipedia/commons/0/0a/Galaxy_Tab_S8.png"^^xsd:anyURI ;
+    mall:hasName "Samsung Galaxy Tab S8" ;
+    mall:hasOS "안드로이드 13" ;
+    mall:hasPrice 1099000.0 ;
+    mall:hasRAM "256GB" ;
+    mall:hasResolution "WQXGA+" ;
+    mall:hasScreenSize "11.0인치" ;
+    mall:hasStorage "12GB RAM" ;
+    mall:hasWeight "503g (Wi-Fi) / 507g (5G)" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/114> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/4> ;
+    mall:hasBattery "최대 10시간 사용 가능" ;
+    mall:hasCPU "MT8183 Helio P60T" ;
+    mall:hasDescription "10인치 대화면 태블릿으로, 뛰어난 성능과 품질로 다양한 콘텐츠를 즐길 수 있습니다. 최신 모델은 25% 더 빠른 프로세서와 3GB의 메모리가 특징입니다." ;
+    mall:hasImage "https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-reorg-privacy._CB779528203_.png"^^xsd:anyURI ;
+    mall:hasName "Amazon Fire HD 10" ;
+    mall:hasOS "Fire OS (안드로이드 기반)" ;
+    mall:hasPrice 139990.0 ;
+    mall:hasRAM "3GB" ;
+    mall:hasResolution "1080p Full HD" ;
+    mall:hasScreenSize "10.1인치" ;
+    mall:hasStorage "64GB" ;
+    mall:hasWeight "약 295g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/12> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "80Wh" ;
+    mall:hasCPU "인텔 코어 i5-16세대" ;
+    mall:hasDescription "이 제품은 최신 인텔 코어 프로세서를 탑재하고 있으며, 뛰어난 성능과 휴대성을兼ね備えた LG 그램 프로 16인치 노트북입니다. 큰 화면과 가벼운 무게는 사용자의 요구에 최적화된 제품으로, 다양한 작업을 수행할 수 있습니다." ;
+    mall:hasGPU "인텔 Xe Graphics" ;
+    mall:hasImage "https://www.lge.co.kr/lg5-common/images/common/share/share-default.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 프로 16인치 노트북" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 2840000.0 ;
+    mall:hasRAM "16GB DDR5" ;
+    mall:hasResolution "3840x2400 (QHD+)" ;
+    mall:hasScreenSize "16.0인치" ;
+    mall:hasStorage "2TB SSD" ;
+    mall:hasWeight "1,190g" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/13> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "HP 엔비 x360 14-fa0040AU는 크기가 12.34 x 8.62 x 0.67 인치이며, 무게는 1.4kg입니다. 이 모델은 Intel Core Ultra 5 125U와 Intel Core Ultra 7 155U 두 가지 프로세서 옵션을 제공하며, RAM은 16GB 또는 32GB 중 선택할 수 있고, 디스플레이는 14인치 16:10 WUXGA (1920 x 1200) IPS와 14인치 16:10 2.8K (2880 x 1800) OLED, 120Hz로 제공됩니다." ;
+    mall:hasImage "https://www.hp.com/content/dam/sites/worldwide/personal-computers/consumer/laptops-and-2-n-1s/envy/redesign/ai-updates/envy-laptops_og-image_1200x630.jpg"^^xsd:anyURI ;
+    mall:hasName "HP 엔비 x360 14-fa0040AU [SSD 1TB]" ;
+    mall:hasPrice 1240000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/14> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i9-12900H" ;
+    mall:hasColor "블루" ;
+    mall:hasDescription "MSI Raider GE76는 최신 12세대 인텔 코어 i9 프로세서와 NVIDIA RTX 3060 그래픽을 탑재한 강력한 게이밍 노트북입니다. 17.3인치의 고해상도 디스플레이를 갖추고 있으며, 뛰어난 성능과 품질을 자랑합니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 3060" ;
+    mall:hasImage "https://nanoreview.net/common/images/laptop/msi-ge76-raider-mini.jpeg"^^xsd:anyURI ;
+    mall:hasName "MSI Raider GE76" ;
+    mall:hasPrice 2150660.0 ;
+    mall:hasRAM "16GB DDR5" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "17.3인치" ;
+    mall:hasStorage "1TB NVMe SSD" ;
+    mall:hasWeight "約2.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/15> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "ASUS ROG Zephyrus G14 (2025)는 최신 AMD Ryzen™ 9 6900HS 프로세서와 NVIDIA RTX 5080 그래픽을 탑재한 뛰어난 성능과 멋진 OLED 디스플레이를 갖춘 게이밍 노트북입니다. 무게는 약 3.46lb, 배터리는 최대 12시간 이상 지속됩니다." ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/BBA02654-B55D-4FF9-B75F-A18620BE253B"^^xsd:anyURI ;
+    mall:hasName "ASUS ROG Zephyrus G14 (2025)" ;
+    mall:hasPrice 5129000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/16> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "8코어 CPU" ;
+    mall:hasDescription "새로 출시된 MacBook Air 15인치 모델은 최신 M2 칩셋을 탑재하여 뛰어난 성능과 품질을 제공합니다. 가벼운 무게와 강력한 배터리 사용 시간으로 언제 어디서나 작업이 가능하며, 38.9cm Liquid Retina 디스플레이를 통해 화려하고 생생한 콘텐츠를 즐길 수 있습니다." ;
+    mall:hasGPU "10코어 GPU" ;
+    mall:hasImage "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111346_SP893-2023-macbook-air-m2.png"^^xsd:anyURI ;
+    mall:hasName "MacBook Air 15 (M2, 2023년)" ;
+    mall:hasOS "macOS Ventura" ;
+    mall:hasPrice 2050000.0 ;
+    mall:hasRAM "8GB 통합 메모리" ;
+    mall:hasStorage "256GB SSD 저장 장치" ;
+    mall:hasWeight "1.51kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/2> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/2> ;
+    mall:hasDescription "삼성전자가 출시한 강력한 AI 스마트폰으로, 최신 카메라 기능과 프로세서를 갖추고 있습니다. 다양한 색상으로 선택할 수 있으며, 삼성닷컴에서 사양을 확인하실 수 있습니다." ;
+    mall:hasImage "https://images.samsung.com/kdp/common/img-induce-benefit-4.png"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 S25 시리즈" ;
+    mall:hasPrice 0.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/20> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-1360P" ;
+    mall:hasDescription "삼성의 초경량 노트북 컴퓨터로, 투인원 기능을 통해 다양한 사용 환경에서 활용 가능합니다. 강력한 성능과 멋진 디스플레이를 자랑하며, 최신 인텔 코어 프로세서와 고급 그래픽 카드를 탑재하고 있습니다." ;
+    mall:hasGPU "NVIDIA® GeForce RTX™ 4050 Graphics 80W TGP (외장그래픽)" ;
+    mall:hasImage "https://i.namu.wiki/i/Va8c7-62qeW3mFf9kyLVNgBGj73x6VKjsNtBHd0pb4h2lWFFW3js---UI70VQNBptaoJq0UQ_n_cCNfQx9uRbZyRvwKNOYasJ36U8dYUtaEHsvoFTilsg_Upku8nz4B15Bl-ugIVVUtKZ-VKn4FCkw.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북3 Pro" ;
+    mall:hasPrice 259000.0 ;
+    mall:hasRAM "16GB LPDDR5X (7,467Mhz)" ;
+    mall:hasScreenSize "13.3인치" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "約1.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/21> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-1260P (12세대)" ;
+    mall:hasDescription "LG 그램 AI 14Z90T-GA56K은 고해상도 디스플레이와 강력한 성능으로 최적의 사용자 경험을 제공합니다. 가볍고 슬림한 디자인과 휴대성 높은 노트북입니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics" ;
+    mall:hasImage "https://www.lge.co.kr/lg5-common/images/common/share/share-default.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 AI 14Z90T-GA56K" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 33800.0 ;
+    mall:hasRAM "16GB DDR4" ;
+    mall:hasResolution "3840x2400" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.19kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/22> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "HP의 최신 스펙터 x360 16은 고해상도 OLED 화면과 인텔 코어 울트라 7 155H 프로세서를 탑재한 품질 높은 노트북입니다." ;
+    mall:hasImage "https://img.danawa.com/prod_img/500000/080/232/img/35232080_1.jpg?shrink=360:360&_v=20251021151701"^^xsd:anyURI ;
+    mall:hasName "HP Spectre x360 16" ;
+    mall:hasPrice 2905500.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/23> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "최대 17시간 동안 작동하는 배터리" ;
+    mall:hasCPU "최신 11세대 인텔® 코어™ 프로세서" ;
+    mall:hasDescription "이 노트북은 최신 11세대 인텔® 코어™ 프로세서와 최대 17시간 동안 작동하는 배터리를 탑재하고 있으며, 약 1kg의 무게와 90%의 본체 대비 화면 크기 비율을 자랑합니다." ;
+    mall:hasGPU "내장 그래픽(Iris Xe)" ;
+    mall:hasImage "https://www.batterybuy.kr/Images/cart.png"^^xsd:anyURI ;
+    mall:hasName "Acer Swift 5 SF514-55T-53GC" ;
+    mall:hasOS "미확인" ;
+    mall:hasPort "USB-PD(+DC)" ;
+    mall:hasPrice 354800.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "미확인" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "약 1kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/24> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 i7-13700H" ;
+    mall:hasColor "블랙/화이트" ;
+    mall:hasDescription "고성능 게이밍 노트북 MSI Stealth 17 Studio A13VH QHD는 최신 인텔 i7-13700H 프로세서와 NVIDIA GeForce RTX 4080 GPU를 탑재하여 강력한 성능을 제공합니다. 2560x1440 해상도의 QHD 디스플레이와 높은 주사율으로 게임과 작업 모두 최적화됩니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 4080" ;
+    mall:hasImage "https://img.danawa.com/new/danawaApp/img/app1.gif"^^xsd:anyURI ;
+    mall:hasName "MSI Stealth 17 Studio A13VH QHD WIN11 64GB램 (SSD 2TB)" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 380000.0 ;
+    mall:hasRAM "DDR5 16GB" ;
+    mall:hasScreenSize "QHD (2560x1440) / 240Hz IPS 패널" ;
+    mall:hasStorage "NVMe M.2 SSD 2TB" ;
+    mall:hasWeight "약 2.8kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/25> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "47Whr" ;
+    mall:hasCPU "Intel Core i7-1260P" ;
+    mall:hasDescription "ASUS의 ASUS TUF Gaming F15는 고성능 게이밍 노트북으로, 최신 그래픽 카드와 뛰어난 디스플레이를 제공합니다. 이 노트북은 다양한 사용자 요구에 맞춰 설계되었으며, 휴대성과 성능 모두에서 우수한 결과를 보여줍니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 3060 Laptop GPU" ;
+    mall:hasImage "https://www.asus.com/media/global/gallery/vzlsetmmboinmci1_setting_xxx_0_90_end_2000.png"^^xsd:anyURI ;
+    mall:hasName "ASUS TUF Gaming F15" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 1095000.0 ;
+    mall:hasRAM "16GB DDR5-4800 SDRAM" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "約 2.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/3> a mall:Electronics ;
+    rdfs:comment "의심 가격: 314원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "최대 19시간" ;
+    mall:hasCPU "미확인" ;
+    mall:hasDescription "삼성의 휴대성과 성능을 모두 갖춘 고급 노트북으로, 120Hz 주사율 디스플레이와 멀티태스킹이 가능한 투인원 기능을 제공합니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://www.itworld.co.kr/wp-content/uploads/2024/10/3549039-0-35052200-1728285799-ITworld-Placeholder-3.png?w=1024"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북3 프로 360" ;
+    mall:hasOS "윈도우11 홈" ;
+    mall:hasPort "USB-C, HDMI, USB-A, SD 카드 리더" ;
+    mall:hasPrice 314.0 ;
+    mall:hasRAM "미확인" ;
+    mall:hasResolution "2880x1800(WQXGA+)" ;
+    mall:hasScreenSize "40.6cm(16인치)" ;
+    mall:hasStorage "미확인" ;
+    mall:hasWeight "미확인" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/30> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core™ Ultra 7 Series" ;
+    mall:hasDescription "ASUS VivoBook Pro 14 OLED는 강력한 성능과 뛰어난 디스플레이를 갖춘 휴대용 노트북으로, 다양한 작업에 최적화되어 있습니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 3050" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/7d7cf974-8597-4fde-bf0f-6cfbd81ed2ec/"^^xsd:anyURI ;
+    mall:hasName "ASUS VivoBook Pro 14 OLED" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 2029000.0 ;
+    mall:hasRAM "32 GB" ;
+    mall:hasScreenSize "14英寸" ;
+    mall:hasStorage "1TB PCIe 4.0 SSD" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/31> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-1260P" ;
+    mall:hasDescription "삼성의 초경량 노트북 컴퓨터로, 강력한 성능과 품질을 자랑합니다. 39.6cm(15.6인치) 화면 크기와 Intel Core i7-1260P 프로세서를 통해 뛰어난 작업 환경을 제공합니다." ;
+    mall:hasGPU "Intel Arc™ 그래픽" ;
+    mall:hasImage "https://i.namu.wiki/i/Va8c7-62qeW3mFf9kyLVNgBGj73x6VKjsNtBHd0pb4h2lWFFW3js---UI70VQNBptaoJq0UQ_n_cCNfQx9uRbZyRvwKNOYasJ36U8dYUtaEHsvoFTilsg_Upku8nz4B15Bl-ugIVVUtKZ-VKn4FCkw.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북2 Pro" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 8499000.0 ;
+    mall:hasRAM "16GB LPDDR5X" ;
+    mall:hasScreenSize "39.6cm(15.6인치)" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "1.41kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/32> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "80Wh" ;
+    mall:hasCPU "인텔 코어 i7-1360P" ;
+    mall:hasDescription "LG 그램 16 G80은 뛰어난 휴대성과 강력한 성능을兼備한 노트북으로, 고해상도 디스플레이와 빠른 속도로 최적의 성능을 제공합니다." ;
+    mall:hasGPU "인텔 Xe Graphics" ;
+    mall:hasImage "https://cdn.4th.kr/image/ndsoft.svg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 16 G80" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 2490000.0 ;
+    mall:hasRAM "16GB DDR5" ;
+    mall:hasResolution "QHD (2880x1800)" ;
+    mall:hasScreenSize "16.0英寸" ;
+    mall:hasStorage "256GB SSD" ;
+    mall:hasWeight "約1.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/4> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 울트라5" ;
+    mall:hasDescription "고해상도 디스플레이와 강력한 퍼포먼스로 최적의 성능을 제공하는 LG 그램 17Z90S-GA5BK 노트북입니다. 가볍고 슬림한 디자인으로 사용자의 요구에 맞춰 제작되었습니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://www.lge.co.kr/kr/images/notebook/md10377826/md10377826-350x350.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 17Z90S-GA5BK" ;
+    mall:hasOS "윈도우11 홈" ;
+    mall:hasPort "미확인" ;
+    mall:hasPrice 861000.0 ;
+    mall:hasRAM "125H (4.5GHz)" ;
+    mall:hasResolution "2560x1600(WQXGA)" ;
+    mall:hasScreenSize "43.1cm(17인치)" ;
+    mall:hasStorage "SSD 2TB" ;
+    mall:hasWeight "1.35kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/40> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "60Whr" ;
+    mall:hasCPU "Intel Core i7-1355U" ;
+    mall:hasDescription "HP의 HP Pavilion 14는 이동 중에도 창의력을 발휘할 수 있는 강력한 컴퓨팅 성능과 깔끔한 디자인을 갖춘 노트북입니다. 화면 크기는 14인치로, 다양한 작업에 최적화된 제품입니다." ;
+    mall:hasImage "https://www.hp.com/content/dam/sites/worldwide/dems/hp_og_image.jpg"^^xsd:anyURI ;
+    mall:hasName "HP Pavilion 14" ;
+    mall:hasOS "Windows 11 Home" ;
+    mall:hasPrice 20241104.0 ;
+    mall:hasRAM "8GB" ;
+    mall:hasScreenSize "14英寸, Full HD (1920 x 1080)" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "1.37kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/41> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "AMD Ryzen™ 9 8940H" ;
+    mall:hasColor "Black" ;
+    mall:hasDescription "ASUS의 TUF 시리즈 노트북 중 하나로, 최신 AMD Ryzen™ 9 8940H CPU와 NVIDIA® GeForce RTX™ 4070 Laptop GPU를 탑재한 고성능 게이밍 노트북입니다." ;
+    mall:hasGPU "NVIDIA® GeForce RTX™ 4070 Laptop GPU" ;
+    mall:hasImage "https://i.namu.wiki/i/V66Ah-jlAZmb8G8IJFpJfBm439-vb_p1S9uYSfoGIIRHoTJ1vvS5SUUYFOLtyjfd8s6egjgXwpSbDWT-L5ncdsEE7Y16OxibVk2_mSGagPqIjpcy13UgCHDr8coDHxM_xV-Q1yF07P_5_ZbY9gzcAg.svg"^^xsd:anyURI ;
+    mall:hasName "ASUS TUF Gaming A15 (2024)" ;
+    mall:hasOS "Windows 10 Pro" ;
+    mall:hasPrice 250000.0 ;
+    mall:hasRAM "16GB DDR5-4800MHz" ;
+    mall:hasScreenSize "QHD (2560x1600) @ 165Hz, 100% sRGB" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "2.3kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/42> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "약 9시간" ;
+    mall:hasCPU "Core™ Ultra 5" ;
+    mall:hasDescription "삼성의 프리미엄 노트북 시리즈인 갤럭시 북3는 초경량 디자인과 고급스러운 외관으로 인해 많은 사용자를 확보하고 있습니다. 최신 기술을 담은 QHD+급 화면, 강력한 성능의 프로세서와 높은 메모리 및 저장공간이 특징입니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://i.namu.wiki/i/Va8c7-62qeW3mFf9kyLVNgBGj73x6VKjsNtBHd0pb4h2lWFFW3js---UI70VQNBptaoJq0UQ_n_cCNfQx9uRbZyRvwKNOYasJ36U8dYUtaEHsvoFTilsg_Upku8nz4B15Bl-ugIVVUtKZ-VKn4FCkw.svg"^^xsd:anyURI ;
+    mall:hasName "삼성 갤럭시 북3" ;
+    mall:hasOS "Windows 10 Pro" ;
+    mall:hasPort "USB-C, HDMI, SD 카드 리더" ;
+    mall:hasPrice 2710000.0 ;
+    mall:hasRAM "512GB NVMe SSD" ;
+    mall:hasResolution "QHD+급" ;
+    mall:hasScreenSize "13.3인치" ;
+    mall:hasStorage "1TB NVMe SSD" ;
+    mall:hasWeight "約1.4kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/43> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "인텔 코어 프로세서 Ultra5" ;
+    mall:hasDescription "이 노트북은 강력한 프로세서와 넉넉한 RAM으로, 학생과 직장인, 그리고 초보자들에게 이상적인 선택입니다. 이 제품은 뛰어난 성능과 가벼운 무게로 최적의 사용성을 제공합니다." ;
+    mall:hasImage "https://www.lge.co.kr/lg5-common/images/common/share/share-default.jpg"^^xsd:anyURI ;
+    mall:hasName "LG 그램 15Z90Q-GA5MK" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 1716000.0 ;
+    mall:hasRAM "16GB" ;
+    mall:hasResolution "FHD (1920x1080)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "512GB SSD" ;
+    mall:hasWeight "약 1.29kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/44> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "슬림하고 가벼우며 스타일리시한 Acer Swift 3 SF314-42 노트북은 최신 AMD Ryzen™ 4500U 프로세서와 Radeon™ 내장그래픽카드를 탑재하여 이동 중에도 업무 처리가 가능합니다. 14인치 IPS 디스플레이에서 즐기실 수 있으며, 가볍고 견고한 메탈바디에 우아한 실버와 퍼플 컬러 중 선택할 수 있습니다." ;
+    mall:hasImage "https://image.enuri.info/webimage_300/11826100000/11826110000/11826118913"^^xsd:anyURI ;
+    mall:hasName "Acer Swift 3 SF314-42-R4PZ" ;
+    mall:hasPrice 599000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/5> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "AMD Ryzen™ AI 9 465" ;
+    mall:hasDescription "ASUS Zenbook Pro 16X OLED은 16인치의 크기에 최대 48GB 메모리와 2TB 저장공간을 제공하며, 강력한 AMD Ryzen AI 프로세서를 탑재하여 고성능 컴퓨팅 환경을 구축합니다. 독특한 Ceraluminum™ 하이테크 세라믹 상판과 앰비언트 쿨링 기술은 최적의 성능과 편안함을 제공합니다." ;
+    mall:hasGPU "미확인" ;
+    mall:hasImage "https://dlcdnwebimgs.asus.com/gain/f34d32c6-c387-4d9f-a3ae-b7e22bcd8720/"^^xsd:anyURI ;
+    mall:hasName "ASUS Zenbook Pro 16X OLED" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPrice 850000.0 ;
+    mall:hasRAM "16GB DDR5 + 32GB SODIMM" ;
+    mall:hasResolution "3K" ;
+    mall:hasScreenSize "16인치" ;
+    mall:hasStorage "2TB PCIe" ;
+    mall:hasWeight "1.5kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/6> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Apple M3 Max (14코어 CPU)" ;
+    mall:hasDescription "Apple의 최신 MacBook Pro 모델로, 강력한 CPU와 GPU를 탑재하여 고급 작업을 위한 완벽한 선택입니다." ;
+    mall:hasGPU "Apple M3 Max (30코어 GPU)" ;
+    mall:hasImage "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m3-max-pro-spaceblack-202402?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1709175741398"^^xsd:anyURI ;
+    mall:hasName "MacBook Pro 14 M3 Max" ;
+    mall:hasOS "최신 macOS" ;
+    mall:hasPrice 2099000.0 ;
+    mall:hasRAM "36GB 통합 메모리" ;
+    mall:hasStorage "1TB SSD" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/7> a mall:Electronics ;
+    rdfs:comment "의심 가격: 0원 (임계값 1000원 미만)"@ko ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasDescription "이 노트북은 HP의 품질과 성능을 자랑하는 16-inch 화면 크기와 강력한 CPU, 높은 메모리 및 저장공간으로 구성되어 있습니다. 다양한 사용자 요구에 맞춰 설계된 이 제품은 작업과 엔터테인먼트를 동시에 즐길 수 있는 탁월한 기능을 제공합니다." ;
+    mall:hasImage ""^^xsd:anyURI ;
+    mall:hasName "HP Pavilion 플러스 40.6cm 노트북 PC 16-ab1000" ;
+    mall:hasPrice 0.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/8> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasCPU "Intel Core i7-13세대 (i7-13700H)" ;
+    mall:hasDescription "디스플레이 크기에 따라 4:10 비율의 InfinityEdge 디스플레인을 제공하며, 최신 Alder Lake-H CPU와 Nvidia Ampere GPU를 탑재한 고성능 노트북입니다." ;
+    mall:hasGPU "NVIDIA GeForce RTX 4070" ;
+    mall:hasImage "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/pdp/pdp-images/notebook-xps-15-9530-pdp-mod-hero-image.psd?qlt=95&fit=constrain,1&hei=400&wid=570&fmt=jpg"^^xsd:anyURI ;
+    mall:hasName "DELL XPS 15 9530" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB Type-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 2399000.0 ;
+    mall:hasRAM "64GB RAM" ;
+    mall:hasResolution "1920x1200 (WUXGA)" ;
+    mall:hasScreenSize "15.6인치" ;
+    mall:hasStorage "2TB SSD" ;
+    mall:hasWeight "約 1.92kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/81> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/3> ;
+    mall:hasDescription "Dell Precision 5510은 역사상 가장 얇고 가벼운 15인치 워크스테이션이며, 전문가용 애플리케이션 실행 능력을 인증 받았습니다. 고성능 노트북·데스크톱·AI 솔루션 및 맞춤형 구매 플랫폼인 Dell 프리미어 등을 통해 고객이 필요에 맞는 제품을 손쉽게 선택하고 구매할 수 있습니다." ;
+    mall:hasImage "https://i.dell.com/das/xa.ashx/global-site-design%20WEB/801612f3-ec40-aec7-a607-cf4704c9d829/1/OriginalPng?id=Dell/Product_Images/Dell_Client_Products/Workstations/Mobile_Workstations/Precision/5510_Non_Touch/global_spi/workstation-precision-5510-non-touch-gray-right-generic-hero-504x350.psd"^^xsd:anyURI ;
+    mall:hasName "Dell Precision 15 5000 시리즈 (5510) 모바일 워크스테이션" ;
+    mall:hasPrice 1399000.0 .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/9> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/1> ;
+    mall:hasBattery "60Whr" ;
+    mall:hasCPU "Intel Core i7-11370H" ;
+    mall:hasDescription "Lenovo ThinkPad X1 Carbon Gen 13 Aura Edition은 최상의 성능을 요구하는 전문가를 위해 설계된 첨단 AI 노트북으로, 세련된 디자인과 고급 보안 기능, 인상적인 배터리 수명으로 뛰어난 업무 성과를 제공합니다." ;
+    mall:hasGPU "Intel Iris Xe Graphics" ;
+    mall:hasImage "https://www.pcworld.com/wp-content/uploads/2025/04/DSC08526.jpg?quality=50&strip=all&w=1024"^^xsd:anyURI ;
+    mall:hasName "Lenovo ThinkPad X1 Carbon Gen 13 Aura Edition" ;
+    mall:hasOS "Windows 11 Pro" ;
+    mall:hasPort "USB-C, USB-A, HDMI, SD 카드 리더" ;
+    mall:hasPrice 1299000.0 ;
+    mall:hasRAM "16GB LPDDR4X-4266MHz" ;
+    mall:hasResolution "1920x1200" ;
+    mall:hasScreenSize "14인치" ;
+    mall:hasStorage "512GB NVMe SSD" ;
+    mall:hasWeight "1.38kg" .
+
+<https://fastcampus.co.kr/data_online_ontology2/product/92> a mall:Electronics ;
+    mall:belongsToCategory <https://fastcampus.co.kr/data_online_ontology2/category/3> ;
+    mall:hasDescription "Dell Precision 17 5000은 고성능 모바일 워크스테이션으로, 최대 16GB NVIDIA RTX A5500급 그래픽을 선택할 수 있습니다. 이 제품은 Dell Optimizer for Precision을 통해 맞춤 구성 가능한 성능과 놀라운 디스플레이를 제공합니다." ;
+    mall:hasImage "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/workstations/mobile-workstations/precision/17-5770/spi/ng/workstations-precision-17-5770-campaign-hero-504x350-ng.psd?fmt=jpg&wid=570&hei=400"^^xsd:anyURI ;
+    mall:hasName "Dell Precision 17 5000" ;
+    mall:hasPrice 2499000.0 .
+
+:Review a owl:Class .
+
+:Product a owl:Class .
+
+<https://fastcampus.co.kr/data_online_ontology2/category/4> a mall:Category ;
+    mall:hasCategoryName "태블릿" ;
+    mall:hasDescription "태블릿 카테고리" .
+
+<https://fastcampus.co.kr/data_online_ontology2/category/1> a mall:Category ;
+    mall:hasCategoryName "노트북" ;
+    mall:hasDescription "노트북 카테고리" .
+

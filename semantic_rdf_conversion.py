@@ -4,11 +4,14 @@ import re
 from rdflib import Graph, Literal, Namespace, RDF, OWL, RDFS, URIRef
 from rdflib.namespace import XSD
 from decimal import Decimal
+from pyvis.network import Network
+from pathlib import Path
 
 
 conn=sqlite3.connect("db/tiny_mall.db")
 conn.row_factory = sqlite3.Row
 MALL = Namespace("https://fastcampus.co.kr/data_online_ontology2/")
+PREFIX = "https://fastcampus.co.kr/data_online_ontology2/"
 
 
 
@@ -504,6 +507,29 @@ WHERE {
 LIMIT 5
 """
 
+#Triple query
+TRIPLES_QUERY = f"""
+SELECT ?s ?p ?o
+WHERE {{
+    ?s ?p ?o .
+    FILTER(!isBlank(?s) && !isBlank(?o))
+    FILTER(STRSTARTS(STR(?s), "{PREFIX}") || STRSTARTS(STR(?p), "{PREFIX}"))
+}}
+LIMIT 300
+"""
+
+#Class query
+CLASS_QUERY = f"""
+PREFIX mall: <{PREFIX}>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?instance ?type
+WHERE {{
+    ?instance rdf:type ?type .
+    FILTER(STRSTARTS(STR(?type), "{PREFIX}"))
+}}
+"""
+
+
 results = g.query(query)
 for row in results:
     print(row.name, row.price, row.catName)
@@ -515,3 +541,180 @@ for row in results1:
 results2 = g.query(q2)
 for row in results2:
     print(row.name, row.purpose, row.portability)
+
+results3 = g.query(TRIPLES_QUERY)
+for row in results3:
+    print(row.s, row.p, row.o)
+df_triples = pd.DataFrame([{"s": str(row.s), "p": str(row.p), "o": str(row.o)} for row in results3])
+
+results4 = g.query(CLASS_QUERY)
+for row in results4:
+    print(row.instance, row.type)
+df_classes=pd.DataFrame([{"instance": str(row.instance), "type": str(row.type)} for row in results4])
+
+
+
+######Visualization
+def short_uri(uri: str) -> str:
+    """URI에서 로컬 이름 추출"""
+    if "/" in uri:
+        return uri.rsplit("/", 1)[-1]
+    if "#" in uri:
+        return uri.rsplit("#", 1)[-1]
+    return uri
+
+type_map = {}
+if not df_classes.empty:
+    for _, row in df_classes.iterrows():
+        type_map[row["instance"]] = short_uri(row["type"])
+
+NODE_STYLE = {
+    "Product": {"color": "#FF6B6B", "size": 25},
+    "Electronics": {"color": "#FF6B6B", "size": 25},
+    "Fashion": {"color": "#E056A0", "size": 25},
+    "Food": {"color": "#FF9F43", "size": 25},
+    "Category": {"color": "#4ECDC4", "size": 40},
+    "Review": {"color": "#95A5A6", "size": 15},
+    "PositiveReview": {"color": "#2ECC71", "size": 15},
+    "NegativeReview": {"color": "#E74C3C", "size": 15},
+}
+DEFAULT_STYLE = {"color": "#74B9FF", "size": 20}
+
+net = Network(
+    height="600px",
+    width="100%",
+    directed=True,
+    bgcolor="#FFFFFF",
+    font_color="#000000",
+    notebook=False
+)
+
+net = Network(
+    height="600px",
+    width="100%",
+    directed=True,
+    bgcolor="#FFFFFF",
+    font_color="#000000",
+    notebook=False
+)
+
+seen = set()
+
+# Convert the SPARQL triples into nodes and edges
+for _, row in df_triples.iterrows():
+    subject_uri = str(row["s"])
+    predicate_uri = str(row["p"])
+    object_value = str(row["o"])
+
+    subject_label = short_uri(subject_uri)
+    predicate_label = short_uri(predicate_uri)
+    object_label = short_uri(object_value)
+
+    # Add the subject node
+    if subject_uri not in seen:
+        subject_type = type_map.get(subject_uri)
+        subject_style = NODE_STYLE.get(
+            subject_type,
+            DEFAULT_STYLE
+        )
+
+        net.add_node(
+            subject_uri,
+            label=subject_label,
+            title=(
+                f"URI: {subject_uri}<br>"
+                f"Type: {subject_type or 'Unknown'}"
+            ),
+            color=subject_style["color"],
+            size=subject_style["size"]
+        )
+
+        seen.add(subject_uri)
+
+    # Add the object node
+    if object_value not in seen:
+        object_type = type_map.get(object_value)
+        object_style = NODE_STYLE.get(
+            object_type,
+            DEFAULT_STYLE
+        )
+
+        net.add_node(
+            object_value,
+            label=object_label,
+            title=(
+                f"Value: {object_value}<br>"
+                f"Type: {object_type or 'Literal/Unknown'}"
+            ),
+            color=object_style["color"],
+            size=object_style["size"]
+        )
+
+        seen.add(object_value)
+
+    # Add the predicate as an edge
+    net.add_edge(
+        subject_uri,
+        object_value,
+        label=predicate_label,
+        title=predicate_uri
+    )
+
+
+# Configure graph interaction and physics
+net.set_options("""
+{
+  "physics": {
+    "enabled": true,
+    "barnesHut": {
+      "gravitationalConstant": -8000,
+      "centralGravity": 0.3,
+      "springLength": 150,
+      "springConstant": 0.04,
+      "damping": 0.09
+    },
+    "stabilization": {
+      "enabled": true,
+      "iterations": 500
+    }
+  },
+  "edges": {
+    "arrows": {
+      "to": {
+        "enabled": true,
+        "scaleFactor": 0.8
+      }
+    },
+    "font": {
+      "size": 12,
+      "align": "middle"
+    },
+    "smooth": {
+      "enabled": true,
+      "type": "dynamic"
+    }
+  },
+  "nodes": {
+    "shape": "dot",
+    "font": {
+      "size": 14
+    }
+  },
+  "interaction": {
+    "hover": true,
+    "navigationButtons": true,
+    "keyboard": true
+  }
+}
+""")
+
+
+# Save the interactive visualization
+OUTPUT_FILE = Path("knowledge_graph.html").resolve()
+
+net.write_html(
+    str(OUTPUT_FILE),
+    open_browser=True
+)
+
+print("Graph saved to:", OUTPUT_FILE)
